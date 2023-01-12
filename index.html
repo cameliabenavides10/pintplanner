@@ -9,6 +9,7 @@
      rel="stylesheet">
     <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/dropdown.css">
 </head>
 
 <body>
@@ -22,53 +23,54 @@
         </cite>
     </head>
     <main>
-        <div class="card" id="activity-am">
-            <select id="activity-selection">
-                <option selected disabled>Choose activities...</option>
-                <option value="">Basketball</option>
-                <option value="">Boating</option>
-                <option value="">Disc Golf</option>
-                <option value="">Fishing</option>
-                <option value="">Hiking</option>
-                <option value="">Mountain Biking</option>
-                <option value="">Trails</option>
-                <option value="">Picnic Tables</option>
-                <option value="">Playgrounds</option>
-                <option value="">Sports Field</option>
-                <option value="">Sailing</option>
-                <option value="">Swimming</option>
-                <option value="">Volleyball</option>
-                <option value="">Wind Surfing</option>
-            </select>
+        <div id="list1" class="dropdown-check-list" tabindex="100">
+            <span class="anchor">Choose Activities...</span>
+            <ul class="items">
+              <li><input type="checkbox" />Basketball </li>
+              <li><input type="checkbox" />Boating </li>
+              <li><input type="checkbox" />Disc Golf </li>
+              <li><input type="checkbox" />Fishing </li>
+              <li><input type="checkbox" />Hiking </li>
+              <li><input type="checkbox" />Mountain Biking </li>
+              <li><input type="checkbox" />Trails </li>
+              <li><input type="checkbox" />Picnic Tables </li>
+              <li><input type="checkbox" />Playgrounds </li>
+              <li><input type="checkbox" />Sports Field </li>
+              <li><input type="checkbox" />Sailing </li>
+              <li><input type="checkbox" />Swimming </li>
+              <li><input type="checkbox" />Volleyball </li>
+              <li><input type="checkbox" />Wind Surfing </li>
+            </ul>
             <div>
                 <button class="submit-activities">Submit</button>
             </div>
         </div>
-        <div class="card" id="activity-pm">
-            <select id="food-selection">
-                <option value="" disabled selected>Choose type of food...</option>
-                <option value="">Barbeque</option>
-                <option value="">Breakfast</option>
-                <option value="">Burgers</option>
-                <option value="">Chicken</option>
-                <option value="">Chinese</option>
-                <option value="">Dessert</option>
-                <option value="">Drinks</option>
-                <option value="">Fast Food</option>
-                <option value="">Hawaiian</option>
-                <option value="">Indian</option>
-                <option value="">Mexican</option>
-                <option value="">Pizza</option>
-                <option value="">Salad</option>
-                <option value="">Sandwiches</option>
-                <option value="">Seafood</option>
-                <option value="">Soup</option>
-            </select>
+        <div id="list2" class="dropdown-check-list" tabindex="100">
+            <span class="anchor">Choose Activities...</span>
+            <ul class="items">
+              <li><input type="checkbox" />Barbeque </li>
+              <li><input type="checkbox" />Breakfast </li>
+              <li><input type="checkbox" />Burgers </li>
+              <li><input type="checkbox" />Chicken </li>
+              <li><input type="checkbox" />Chinese </li>
+              <li><input type="checkbox" />Dessert </li>
+              <li><input type="checkbox" />Drinks </li>
+              <li><input type="checkbox" />Fast Food </li>
+              <li><input type="checkbox" />Hawaiian </li>
+              <li><input type="checkbox" />Indian </li>
+              <li><input type="checkbox" />Mexican </li>
+              <li><input type="checkbox" />Pizza </li> 
+              <li><input type="checkbox" />Salad </li>
+              <li><input type="checkbox" />Sandwiches </li>
+              <li><input type="checkbox" />Seafood </li>
+              <li><input type="checkbox" />Soup </li>
+            </ul>
             <div>
-                <button class="submit-food">Submit</button>
+                <button class="submit-activities">Submit</button>
             </div>
         </div>
     </main>
     <script src="./assets/script.js"></script>
+    <script src="./assets/dropdown.js"></script>
 </body>
 </html>
