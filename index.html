@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day Trip Planner</title>
+    <link href="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJoROEflqzgFmY43_ZKzDqnSJNZccb6NE&libraries=places&callback=initMap"
+     rel="stylesheet">
+    <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <head>
+        <figure>
+            <img src="./assets/images/group #1- day trip planner - white.png" alt="Day Trip Planner">
+        </figure>
+        <cite>       
+            <h1>Day Trip Planner</h1>
+            <h3>Plan a day trip to a Travis County park with fun activities after!</h3>
+        </cite>
+    </head>
+    <main>
+        <div class="card" id="activity-am">
+            <select id="activity-selection">
+                <option selected disabled>Choose activities...</option>
+                <option value="">Basketball</option>
+                <option value="">Boating</option>
+                <option value="">Disc Golf</option>
+                <option value="">Fishing</option>
+                <option value="">Hiking</option>
+                <option value="">Mountain Biking</option>
+                <option value="">Trails</option>
+                <option value="">Picnic Tables</option>
+                <option value="">Playgrounds</option>
+                <option value="">Sports Field</option>
+                <option value="">Sailing</option>
+                <option value="">Swimming</option>
+                <option value="">Volleyball</option>
+                <option value="">Wind Surfing</option>
+            </select>
+        </div>
+        <div class="card" id="activity-pm">
+            <select id="food-selection">
+                <option value="" disabled selected>Choose type of food...</option>
+                <option value="">Barbeque</option>
+                <option value="">Breakfast</option>
+                <option value="">Burgers</option>
+                <option value="">Chicken</option>
+                <option value="">Chinese</option>
+                <option value="">Dessert</option>
+                <option value="">Drinks</option>
+                <option value="">Fast Food</option>
+                <option value="">Hawaiian</option>
+                <option value="">Indian</option>
+                <option value="">Mexican</option>
+                <option value="">Pizza</option>
+                <option value="">Salad</option>
+                <option value="">Sandwiches</option>
+                <option value="">Seafood</option>
+                <option value="">Soup</option>
+            </select>
+        </div>
+        <div>
+            <button class="submit-activities-food">Submit</button>
+        </div>
+    </main>
+</body>
+</html>
