@@ -1,29 +1,77 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DayTrip Planner</title>
-    <link rel="stylesheet" href="./assets/reset.css" />
-  <link rel="stylesheet" href="./assets/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day Trip Planner</title>
+    <link href="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJoROEflqzgFmY43_ZKzDqnSJNZccb6NE&libraries=places&callback=initMap"
+     rel="stylesheet">
+    <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/dropdown.css">
 </head>
 
 <body>
-    <header class="header">
-    <img src="./assets/DayTrip Planner.png" width="25%" >
-<h1>Day Trip Planner</h1>
-<h4>Plan a day trip to a Travis County park with fun activities after!</h4>
-
-</header>
-
-
+    <head>
+        <figure>
+            <img src="./assets/images/group #1- day trip planner - white.png" alt="Day Trip Planner">
+        </figure>
+        <cite>       
+            <h1>Day Trip Planner</h1>
+            <h3>Plan a day trip to a Travis County park with fun activities after!</h3>
+        </cite>
+    </head>
+    <main>
+        <div id="list1" class="dropdown-check-list" tabindex="100">
+            <span class="anchor">Choose Activities...</span>
+            <ul class="items">
+              <li><input type="checkbox" />Basketball </li>
+              <li><input type="checkbox" />Boating </li>
+              <li><input type="checkbox" />Disc Golf </li>
+              <li><input type="checkbox" />Fishing </li>
+              <li><input type="checkbox" />Hiking </li>
+              <li><input type="checkbox" />Mountain Biking </li>
+              <li><input type="checkbox" />Trails </li>
+              <li><input type="checkbox" />Picnic Tables </li>
+              <li><input type="checkbox" />Playgrounds </li>
+              <li><input type="checkbox" />Sports Field </li>
+              <li><input type="checkbox" />Sailing </li>
+              <li><input type="checkbox" />Swimming </li>
+              <li><input type="checkbox" />Volleyball </li>
+              <li><input type="checkbox" />Wind Surfing </li>
+            </ul>
+            <div>
+                <button class="submit-activities">Submit</button>
+            </div>
+        </div>
+        <div id="list2" class="dropdown-check-list" tabindex="100">
+            <span class="anchor">Choose Activities...</span>
+            <ul class="items">
+              <li><input type="checkbox" />Barbeque </li>
+              <li><input type="checkbox" />Breakfast </li>
+              <li><input type="checkbox" />Burgers </li>
+              <li><input type="checkbox" />Chicken </li>
+              <li><input type="checkbox" />Chinese </li>
+              <li><input type="checkbox" />Dessert </li>
+              <li><input type="checkbox" />Drinks </li>
+              <li><input type="checkbox" />Fast Food </li>
+              <li><input type="checkbox" />Hawaiian </li>
+              <li><input type="checkbox" />Indian </li>
+              <li><input type="checkbox" />Mexican </li>
+              <li><input type="checkbox" />Pizza </li> 
+              <li><input type="checkbox" />Salad </li>
+              <li><input type="checkbox" />Sandwiches </li>
+              <li><input type="checkbox" />Seafood </li>
+              <li><input type="checkbox" />Soup </li>
+            </ul>
+            <div>
+                <button class="submit-activities">Submit</button>
+            </div>
+        </div>
+    </main>
     <script src="./assets/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/dropdown.js"></script>
 </body>
 </html>
-=======
 
->>>>>>> 2b910d4f932052c21664d0fdeb327e9667938108
