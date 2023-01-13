@@ -1,11 +1,106 @@
+main {
+    background-color: #f7b46d;
+    height: 75%;
+}
 h1 {
-    background-color: #14AE5C;
+    background-color: #CF6A00;
     text-align: center;
     font-weight: bold;
-    color: white;
-    padding: 5%;
+    color: white!important;
+    padding: 4%;
+    margin-bottom:0!important;
+    font-style: normal;
 }
 
+h5{
+    background-color: #f7b46d;
+    text-align: center;
+    color: white!important;
+    margin-top: 0!important;
+    font-style:normal;
+    padding-bottom: 45px;
+}
+
+
 img{
-    background-color:#14AE5C;
+    background-color:#CF6A00;
+}
+
+cite{
+       background-color: #CF6A00;
+}
+
+
+.hero-section {
+    background-color: #CF6A00;
+    /* url("https://static.pexels.com/photos/248064/pexels-photo-248064.jpeg") 50% no-repeat; */
+    background-size: cover;
+    height: 46vh;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .hero-section .hero-section-text {
+    color: #fefefe;
+    text-shadow: 1px 1px 2px #0a0a0a;
+  }
+  
+
+  .dropbtn {
+    background-color: #CF6A00;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    width: 50%;
+    border: 3px solid #f9f9f9;
+    padding: 10px;
+  }
+
+  .dropdown-check-list {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    width: 50%;
+  
+    padding: 10px;
+  }
+  
+  .beer-select {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  option {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    align-items: center;
+  }
+
+  option:hover{
+    background-color: #ceacac
+}
+
+.dropdown-check-list:hover .beer-select {
+    display: block;
+}
+
+.dropdown-check-list:hover .dropbtn {
+    background-color: #ca8338;
 }
