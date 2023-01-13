@@ -1,7 +1,7 @@
 let locationZip = "787";
 let restaurantChoiceContainer = document.getElementById('restaurants');
 let restaurantName = document.getElementById('items');
-let restaurantChoice = "";
+let restaurantChoice = "Dim-Sum";
 let fetchButton = document.getElementById('submit-activities');
 const options = {
             method: 'GET',
@@ -10,7 +10,7 @@ const options = {
               'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
             }
         }
-        
+
 function getApi() {
   let locationsURL = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/zipcode'
     locationsURL = locationsURL + "/" + locationZip + "/10"
@@ -31,10 +31,20 @@ function getApi() {
         restraurantAddress.textContent= restaurantList.address + restaurantList.zipCode;
         restaurantChoiceContainer.append(restaurants);
         restaurantChoiceContainer.append(restraurantAddress);
+        
+        let restaurantChoice = "Dim-Sum";
+        let storeName = restaurantChoice
+        storedRestChoice = JSON.parse(localStorage.getItem("storeName")) || [];
+        storedRestChoice.push(storeName);
+        localStorage.setItem("storeName", JSON.stringify(storedRestChoice));
       }
     });
+    
 }
 fetchButton.addEventListener('click', getApi);
+
+        // let storeName = restaurantList.restaurantName
+        
 // getApi();
 
 // Michael's API Key: 'X-RapidAPI-Key': 'e045ca9b9amsha0dbbe5302d76a2p14b6a8jsnfe609301f0a7', 'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
