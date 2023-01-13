@@ -2,37 +2,81 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day Trip Planner</title>
-    <link href="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJoROEflqzgFmY43_ZKzDqnSJNZccb6NE&libraries=places&callback=initMap"
-     rel="stylesheet">
+    <link
+        href="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJoROEflqzgFmY43_ZKzDqnSJNZccb6NE&libraries=places&callback=initMap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <!-- <link rel="stylesheet" href="./assets/dropdown.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous"> -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    
 </head>
 
 <body>
-    <head>
-        <figure>
-            <img src="./assets/images/group #1- day trip planner - white.png" alt="Day Trip Planner">
-        </figure>
-        <cite>       
-            <h1>Day Trip Planner</h1>
-            <h3>Plan a day trip to a Travis County park with fun activities after!</h3>
-        </cite>
-    </head>
-    <main>
-        <div id="list1" class="dropdown-check-list" tabindex="100">
-            <select class="brewer-select" id="brew-select">
-                <option disabled selected>Choose type of brew...</option>
-                <option value="micro">Micro</option>
-                <option value="nano">Nano</option>
-                <option value="regional">Regional</option>
-            </select>
-            <div>
-                <button class="submit-activities">Submit</button>
+
+    <head class="header">
+
+
+        <div class="marketing-site-hero">
+            <div class="marketing-site-hero-content">
+               <h1> </h1>
+              <!-- <p class="subheader">A simple way to plan a fun night!</p> -->
+              <!-- <a href="#" class="round button">learn more</a> -->
             </div>
-        </div>
+          </div>
+
+
+
+
+
+          
+         
+    </head>
+    <main >
+        <h5>Select the type of brewery youd like to visit in Austin, TX. <br>
+            Then we will show you restaurants around that area!</h5>
+            
+          
+
+        
+              
+              
+
+
+
+
+            <div id="list1" class="dropdown-check-list"  tabindex="100">
+                <button class="dropbtn">Select</button>
+                <div class="beer-select">
+                    <option value="">Micro</option>
+                    <option value="">Nano</option>
+                    <option value="">Regional</option>
+                    <option value="">Brewpub</option>
+                    <option value="">Large</option>
+                </div>
+                
+                
+            </div>
+        
+
+
+
+
+
+
+           
+
+
+ 
+
+
+
         <div class="card" id="breweries">
             
         </div>
@@ -41,6 +85,9 @@
         </div>
     </main>
     <script src="./assets/script.js"></script>
-    <script src="breweries.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" crossorigin="anonymous"></script> -->
+ 
 </body>
+
 </html>
