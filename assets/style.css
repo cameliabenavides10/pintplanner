@@ -1,61 +1,86 @@
 main {
-    background-color: #f7b46d;
-    height: 75%;
+    background-color: #fce3ca;
+    height: 400px!important;
 }
-h1 {
-    background-color: #CF6A00;
-    text-align: center;
+/* h1 {
+   
+    text-align: left;
     font-weight: bold;
     color: white!important;
     padding: 4%;
     margin-bottom:0!important;
     font-style: normal;
-}
+    font-size: 40px!important;
+   background: rgba(211, 187, 181, 0.5);
+    
+} */
 
 h5{
-    background-color: #f7b46d;
+    background-color: #fce3ca;
     text-align: center;
     color: white!important;
-    margin-top: 0!important;
+    margin-top: 0!important; 
     font-style:normal;
-    padding-bottom: 45px;
+    padding-top: 50px;
+    
 }
 
-
-img{
-    background-color:#CF6A00;
-}
 
 cite{
        background-color: #CF6A00;
 }
 
 
-.hero-section {
-    background-color: #CF6A00;
-    /* url("https://static.pexels.com/photos/248064/pexels-photo-248064.jpeg") 50% no-repeat; */
+
+
+  .marketing-site-hero {
+    background: url("./images/beers123.jpg") top right no-repeat;
+    height: 55vh;
     background-size: cover;
-    height: 46vh;
-    text-align: center;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   
-  .hero-section .hero-section-text {
-    color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
+  @media screen and (min-width: 40em) {
+    .marketing-site-hero {
+      background-position: center center;
+    }
   }
   
+  .marketing-site-hero-content {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .marketing-site-hero-content h1 {
+    font-size: 32px;
+  }
+  
+  .marketing-site-hero-content .button.round {
+    border-radius: 5000px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  
+  @media screen and (min-width: 40em) {
+    .marketing-site-hero-content {
+      padding-left: 50%;
+    }
+  }
+
+
+
+
 
   .dropbtn {
-    background-color: #CF6A00;
+    background-color: #CF6A00!important;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -64,23 +89,25 @@ cite{
     margin: auto;
     width: 50%;
     border: 3px solid #f9f9f9;
-    padding: 10px;
+    padding: 5px;
+    
   }
 
   .dropdown-check-list {
     position: relative;
     display: inline-block;
-    margin: auto;
+    margin: 0 auto;
     width: 50%;
-  
-    padding: 10px;
+    display: flex;
+    
   }
   
   .beer-select {
     display: none;
     position: absolute;
+ 
     background-color: #f9f9f9;
-    min-width: 160px;
+    width: 260px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -103,4 +130,4 @@ cite{
 
 .dropdown-check-list:hover .dropbtn {
     background-color: #ca8338;
-}
+} 
