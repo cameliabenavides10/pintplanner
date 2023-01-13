@@ -1,6 +1,9 @@
 var breweriesContainer = document.getElementById('breweries');
-var fetchButton = document.getElementById('regional-button');
-var brewChoice = "&by_type=regional" // micro, brewpub, contract, regional
+var regionalButton = document.getElementById('regional-button');
+var microButton = document.getElementById('micro-button');
+var brewpubButton = document.getElementById('brewpub-button');
+var contractButton = document.getElementById('contract-button');
+var brewChoice = "&by_type=" // micro, brewpub, contract, regional
 
 // TODO -- listen for click on any of the 4 available type buttons
   // id of button pressed should pass to brewChoice var
@@ -24,6 +27,9 @@ function getApi() {
 
         //Setting the text of the h3 element and p element.
         brewName.textContent = data[i].name;
+        // brewStreet.textContent = data[i].street;
+        // brewCity.textContent = data[i].city;
+        // brewState.textContent = data[i].state;
         brewZip.textContent = data[i].postal_code;
 
         //Appending the dynamically generated html to the div associated with the id="users"
@@ -33,4 +39,7 @@ function getApi() {
       }
     });
 }
+
+
+
 fetchButton.addEventListener('click', getApi);
