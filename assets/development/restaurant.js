@@ -40,6 +40,12 @@ function getApi() {
       }
     });
 }
+        
+        let storeName = restaurantChoice
+        storedRestChoice = JSON.parse(localStorage.getItem("storeName")) || [];
+        storedRestChoice.push(storeName);
+        localStorage.setItem("storeName", JSON.stringify(storedRestChoice));
+
 fetchButton.addEventListener('click', getApi);
 
 // function restaurantChoice(event) {
@@ -56,6 +62,8 @@ fetchButton.addEventListener('click', getApi);
 // getApi();
 
 // Michael's API Key: 'X-RapidAPI-Key': 'e045ca9b9amsha0dbbe5302d76a2p14b6a8jsnfe609301f0a7', 'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
+
+// Camelia's API Key: 'X-RapidAPI-Key': '46164f71f4msh24d65c9eecf4879p1c3ec4jsnd8b0ebced189', 'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
     
 
     // karen's API keys that have hit the limit: 'X-RapidAPI-Key': '495e45f322msh4fca825b3c3afa3p19ec03jsnd3b134bddfbd',
