@@ -1,10 +1,14 @@
-var usersContainer = document.getElementById('users');
-var fetchButton = document.getElementById('fetch-button');
-var brewChoice = "&by_type=regional"
+var breweriesContainer = document.getElementById('breweries');
+var fetchButton = document.getElementById('regional-button');
+var brewChoice = "&by_type=regional" // micro, brewpub, contract, regional
+
+// TODO -- listen for click on any of the 4 available type buttons
+  // id of button pressed should pass to brewChoice var
+  // e.g. if 'regional-button' is pressed then brewChoice = '&by_type=regional'
 
 function getApi() {
-  var requestUrl = 'https://api.openbrewerydb.org/breweries?by_city=austin';
-    requestUrl = requestUrl+brewChoice;
+  var requestUrl = 'https://api.openbrewerydb.org/breweries?by_postal=78&by_city=austin&per_page=50';
+    requestUrl = requestUrl+brewChoice; // adds type query to base url
 
   fetch(requestUrl)
     .then(function (response) {
@@ -24,8 +28,8 @@ function getApi() {
 
         //Appending the dynamically generated html to the div associated with the id="users"
         //Append will attach the element as the bottom most child.
-        usersContainer.append(brewName);
-        usersContainer.append(brewZip);
+        breweriesContainer.append(brewName);
+        breweriesContainer.append(brewZip);
       }
     });
 }
