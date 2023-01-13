@@ -9,7 +9,6 @@
      rel="stylesheet">
     <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="./assets/dropdown.css">
 </head>
 
 <body>
@@ -24,19 +23,24 @@
     </head>
     <main>
         <div id="list1" class="dropdown-check-list" tabindex="100">
-            <select class="brewer-select">
-                <option value="">Micro</option>
-                <option value="">Nano</option>
-                <option value="">Regional</option>
-                <option value="">Brewpub</option>
-                <option value="">Large</option>
+            <select class="brewer-select" id="brew-select">
+                <option disabled selected>Choose type of brew...</option>
+                <option value="micro">Micro</option>
+                <option value="nano">Nano</option>
+                <option value="regional">Regional</option>
             </select>
             <div>
                 <button class="submit-activities">Submit</button>
             </div>
         </div>
+        <div class="card" id="breweries">
+            
+        </div>
+        <div class="card" id="results-2">
+
+        </div>
     </main>
     <script src="./assets/script.js"></script>
-    <script src="./assets/dropdown.js"></script>
+    <script src="breweries.js"></script>
 </body>
 </html>

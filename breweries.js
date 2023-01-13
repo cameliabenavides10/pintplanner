@@ -1,7 +1,7 @@
 var breweriesContainer = document.getElementById('breweries');
 var fetchButton = document.getElementById('regional-button');
-var brewChoice = "&by_type=regional" // micro, brewpub, contract, regional
-
+var brewChoice = document.querySelector('#brew-select').value; // micro, brewpub, contract, regional
+console.log(brewChoice);
 // TODO -- listen for click on any of the 4 available type buttons
   // id of button pressed should pass to brewChoice var
   // e.g. if 'regional-button' is pressed then brewChoice = '&by_type=regional'
