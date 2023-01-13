@@ -1,0 +1,132 @@
+main {
+    background-color: #fce3ca;
+/*     height: 400px!important; */
+}
+/* h1 {
+   
+    text-align: left;
+    font-weight: bold;
+    color: white!important;
+    padding: 4%;
+    margin-bottom:0!important;
+    font-style: normal;
+    font-size: 40px!important;
+   background: rgba(211, 187, 181, 0.5);
+    
+} */
+
+h5{
+    background-color: #fce3ca;
+    text-align: center;
+    color: white!important;
+    margin-top: 0!important; 
+    font-style:normal;
+    padding-top: 50px;
+    
+}
+
+
+cite{
+       background-color: #CF6A00;
+}
+
+
+
+
+  .marketing-site-hero {
+    background: url("./images/beers123.jpg") top right no-repeat;
+    height: 55vh;
+    background-size: cover;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  @media screen and (min-width: 40em) {
+    .marketing-site-hero {
+      background-position: center center;
+    }
+  }
+  
+  .marketing-site-hero-content {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .marketing-site-hero-content h1 {
+    font-size: 32px;
+  }
+  
+  .marketing-site-hero-content .button.round {
+    border-radius: 5000px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  
+  @media screen and (min-width: 40em) {
+    .marketing-site-hero-content {
+      padding-left: 50%;
+    }
+  }
+
+
+
+
+
+  .dropbtn {
+    background-color: #CF6A00!important;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    width: 50%;
+    border: 3px solid #f9f9f9;
+    padding: 5px;
+    
+  }
+
+  .dropdown-check-list {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    
+  }
+  
+  .beer-select {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 260px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  option {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    align-items: center;
+  }
+
+  option:hover{
+    background-color: #ceacac
+}
+
+.dropdown-check-list:hover .beer-select {
+    display: block;
+}
+
+.dropdown-check-list:hover .dropbtn {
+    background-color: #ca8338;
+} 
