@@ -2,7 +2,7 @@ let locationZip = "787";
 let restaurantChoiceContainer = document.getElementById('restaurants');
 let restaurantName = document.getElementById('items');
 let restaurantChoice = "";
-let fetchButton = document.getElementById('submit-activities');
+let fetchButton = document.getElementById('submit-activities');  // karen
 const options = {
             method: 'GET',
             headers: {
@@ -11,7 +11,7 @@ const options = {
             }
         }
         
-function getApi() {
+function getApii() {
   let locationsURL = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/zipcode'
     locationsURL = locationsURL + "/" + locationZip + "/10"
 
@@ -40,6 +40,7 @@ function getApi() {
       }
     });
 }
+<<<<<<< HEAD
         
         let storeName = restaurantChoice
         storedRestChoice = JSON.parse(localStorage.getItem("storeName")) || [];
@@ -47,6 +48,9 @@ function getApi() {
         localStorage.setItem("storeName", JSON.stringify(storedRestChoice));
 
 fetchButton.addEventListener('click', getApi);
+=======
+fetchButton.addEventListener('click', getApii);
+>>>>>>> 6e7a4b5517aab53ac9102eaf4899093f75cc4139
 
 // function restaurantChoice(event) {
 //   if (!event) var event = window.event;
