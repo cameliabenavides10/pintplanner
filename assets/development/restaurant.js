@@ -30,7 +30,7 @@ function getApi() {
        
 
         restaurantName.textContent = restaurant.restaurantName;
-        restraurantAddress.textContent= restaurant.address + restaurant.zipCode;
+        restraurantAddress.textContent= restaurant.address + "," + restaurant.zipCode +","+ restaurant.cuisineType;
         restaurantChoiceContainer.append(restaurantName);
         restaurantChoiceContainer.append(restraurantAddress);
 
