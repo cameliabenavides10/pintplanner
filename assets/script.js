@@ -4,7 +4,7 @@ let restaurantName = document.getElementById('items');
 let restaurantChoice = "";
 let fetchButton = document.getElementById('submit-activities'); // karen
 var breweriesContainer = document.getElementById('breweries');
-var regionalButton = document.getElementById('regional-button');
+var brewButtonPressed = ""
 // var brewType = "";
  // micro, brewpub, contract, regional
 
@@ -12,21 +12,34 @@ var regionalButton = document.getElementById('regional-button');
 
 
 //GETTING VALUES AND CREATING A DYNAMIC VALUE BASED ON USER CHOICE WHILE TRYING TO INSERT IT INTO URL 
-var brewOption = document.getElementById("list1");
-var brewValue = brewOption.value;
+// var brewOption = document.getElementById("list1");
+// var brewValue = brewOption.value;
 
 // FUNCTION GRABBING VALUE FROM DROP DOWN WORKS MORE OR LESS BUT NEED POLISHING
-function listQ(){
-  var brewOption = document.getElementById("list1");
-  var brewValue = brewOption.value;
-  console.log(brewValue);
+// function listQ(){
+//   var brewOption = document.getElementById("list1");
+//   var brewValue = brewOption.value;
+//   console.log(brewValue);
   
-};
+// };
 
-var requestUrl = "https://api.openbrewerydb.org/breweries?by_type=" + brewValue + "&by_city=austin&per_page=20";
+
+function getButton(){
+  var microButton = document.getElementById('micro-button');
+  var brewpubButton = document.getElementById('brewpub-button');
+  var regionalButton = document.getElementById('regional-button');
+  var contractButton = document.getElementById('contract-button');
+
+
+  
+}
+
+
+
 
 
 function getApi() {
+  var requestUrl = "https://api.openbrewerydb.org/breweries?by_type=regional&by_city=austin&per_page=20";
     fetch(requestUrl)
       .then(function (response) {
         return response.json();
@@ -37,32 +50,48 @@ function getApi() {
         // LOOPING THRU INFO AND GETTING NAMES, ADDRESS, ZIP, PHONE
         for (var i = 0; i < data.length; i++) {
           
-          var barName = data[i].name;
-          var barZip = data[i].postal_code;
-          var barAddress = data[i].street;
-          var barPhone = data[i].phone;
-          console.log(barZip);
-          console.log(barName);
-          console.log(barAddress);
-          console.log(barPhone);
+          var brewName = data[i].name;
+          var brewZip = data[i].postal_code;
+          // var barAddress = data[i].street;
+          // var barPhone = data[i].phone;
+          // console.log(barZip);
+          console.log(brewName);
+          // console.log(barAddress);
+          // console.log(barPhone);
         
   
           //Setting the text of the h3 element and p element.
-          // brewName.textContent = data[i].name;
+          brewName.textContent = data[i].name;
           // brewStreet.textContent = data[i].street;
           // brewCity.textContent = data[i].city;
           // brewState.textContent = data[i].state;
-          // brewZip.textContent = data[i].postal_code;
-          // var brewName = document.createElement('h3');
-          // var brewZip = document.createElement('p');
+          brewZip.textContent = data[i].postal_code;
+          var brewName = document.createElement('h3');
+          var brewZip = document.createElement('p');
   
           //Appending the dynamically generated html to the div associated with the id="users"
           //Append will attach the element as the bottom most child.
-          // breweriesContainer.append(brewName);
-          // breweriesContainer.append(brewZip);
+          breweriesContainer.append(brewName);
+          breweriesContainer.append(brewZip);
+
+          $(`#${brewButtons.id}`).on("click", function (event) {
+            console.log('Brewery type' + event.target + 'was clicked')
+          });
         }
       });
+
+    
+
   }
+
+  regionalButton.addEventListener('click', getButton);
+  microButton.addEventListener('click', getButton);
+  brewpubButton.addEventListener('click', getButton);
+  contractButton.addEventListener('click', getButton);
+
+
+
+
 
 
 const options = {
@@ -97,11 +126,14 @@ function getApii() {
                 restaurantChoiceContainer.append(restraurantAddress);
 
                 $(`#${restaurantName.id}`).on("click", function () {
-                    console.log('restaurant name' + restaurantName + 'was clicked')
+                    console.log('restaurant name' + restaurant.restaurantName + 'was clicked')
                 });
             }
         });
 }
-document.getElementById("list1").addEventListener("click",listQ)
-regionalButton.addEventListener('click', getApi)
+// document.getElementById("list1").addEventListener("click",listQ)
+
+
+
+
 fetchButton.addEventListener('click', getApii);
