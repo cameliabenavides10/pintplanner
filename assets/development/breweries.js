@@ -1,16 +1,15 @@
 var breweriesContainer = document.getElementById('breweries');
 var regionalButton = document.getElementById('regional-button');
-var microButton = document.getElementById('micro-button');
-var brewpubButton = document.getElementById('brewpub-button');
-var contractButton = document.getElementById('contract-button');
-var brewChoice = "&by_type=" // micro, brewpub, contract, regional
+var brewChoice = document.querySelector('.beer-select').value
+ // micro, brewpub, contract, regional
 
 // TODO -- listen for click on any of the 4 available type buttons
   // id of button pressed should pass to brewChoice var
   // e.g. if 'regional-button' is pressed then brewChoice = '&by_type=regional'
 
+
 function getApi() {
-  var requestUrl = 'https://api.openbrewerydb.org/breweries?by_postal=78&by_city=austin&per_page=50';
+  var requestUrl = 'https://api.openbrewerydb.org/breweries?by_postal=78&by_city=austin&per_page=50&by_type=';
     requestUrl = requestUrl+brewChoice; // adds type query to base url
 
   fetch(requestUrl)
