@@ -39,7 +39,11 @@
 
 
 
-        <select id="list1" class="dropdown-check-list" tabindex="100">
+
+
+
+
+        <!-- <select id="list1" class="dropdown-check-list" tabindex="100">
             <button class="dropbtn">Select</button>
             <div class="beer-select">
                 <option value="micro">Micro</option>
@@ -47,24 +51,34 @@
                 <option value="brewpub">Brewpub</option>
                 <option value="contract">Contract</option>
             </div>
-          </select>
+          </select> -->
 
 
         <div class="col s12 m7">
-            <h2 class="header">Horizontal Card</h2>
+            <h2 class="header">Brew Card</h2>
             <div class="card horizontal">
               <div class="card-image">
                <img src=""> 
               </div>
-              <div class="card-stacked">
+              <div id="brewButtons" class="card-stacked">
                 <div class="card-content">
                   <p>I am a very simple card. I am good at containing small bits of information.</p>
                 </div>
-                <button class="btn btn-danger" id="regional-button">
+                <button class="btn" id="regional">
                   Regional
                 </button> 
+                <button class="btn" id="micro">
+                  Micro
+                </button> 
+                <button class="btn " id="brewpub">
+                  BrewPub
+                </button> 
+                <button class="btn" id="contract">
+                  Contract
+                </button> 
                 <div class="card-action">
-                  <a href="#">This is a link</a>
+                <div class="flex-column" id="breweries"></div>
+
                 </div>
               </div>
             </div>

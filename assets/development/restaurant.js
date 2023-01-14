@@ -35,12 +35,11 @@ function getApii() {
         restaurantChoiceContainer.append(restraurantAddress);
 
         $(`#${restaurantName.id}`).on("click", function() {
-         console.log('restaurant name' + restaurantName + 'was clicked')
+         console.log('restaurant name' + restaurant.restaurantName + 'was clicked')
         });
       }
     });
 }
-<<<<<<< HEAD
         
         let storeName = restaurantChoice
         storedRestChoice = JSON.parse(localStorage.getItem("storeName")) || [];
@@ -48,9 +47,7 @@ function getApii() {
         localStorage.setItem("storeName", JSON.stringify(storedRestChoice));
 
 fetchButton.addEventListener('click', getApi);
-=======
 fetchButton.addEventListener('click', getApii);
->>>>>>> 6e7a4b5517aab53ac9102eaf4899093f75cc4139
 
 // function restaurantChoice(event) {
 //   if (!event) var event = window.event;
@@ -72,3 +69,5 @@ fetchButton.addEventListener('click', getApii);
 
     // karen's API keys that have hit the limit: 'X-RapidAPI-Key': '495e45f322msh4fca825b3c3afa3p19ec03jsnd3b134bddfbd',
                 // 'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
+
+               
