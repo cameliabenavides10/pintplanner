@@ -5,37 +5,61 @@ let restaurantChoice = "";
 let fetchButton = document.getElementById('submit-activities'); // karen
 var breweriesContainer = document.getElementById('breweries');
 var regionalButton = document.getElementById('regional-button');
-var brewChoice = '';
+// var brewType = "";
  // micro, brewpub, contract, regional
 
-function getApi() {
-    var requestUrl = 'https://api.openbrewerydb.org/breweries?by_postal=78&by_city=austin&per_page=50';
-        brewChoice = document.querySelector('#list1').value
-      requestUrl = requestUrl+brewChoice; // adds type query to base url
+
+
+
+//GETTING VALUES AND CREATING A DYNAMIC VALUE BASED ON USER CHOICE WHILE TRYING TO INSERT IT INTO URL 
+var brewOption = document.getElementById("list1");
+var brewValue = brewOption.value;
+
+// FUNCTION GRABBING VALUE FROM DROP DOWN WORKS MORE OR LESS BUT NEED POLISHING
+function listQ(){
+  var brewOption = document.getElementById("list1");
+  var brewValue = brewOption.value;
+  console.log(brewValue);
   
+};
+
+var requestUrl = "https://api.openbrewerydb.org/breweries?by_type=" + brewValue + "&by_city=austin&per_page=20";
+
+
+function getApi() {
     fetch(requestUrl)
       .then(function (response) {
         return response.json();
       })
       .then(function (data) {
         //Using console.log to examine the data
-        console.log(data);
+       
+        // LOOPING THRU INFO AND GETTING NAMES, ADDRESS, ZIP, PHONE
         for (var i = 0; i < data.length; i++) {
-          //Creating a h3 element and a p element
-          var brewName = document.createElement('h3');
-          var brewZip = document.createElement('p');
+          
+          var barName = data[i].name;
+          var barZip = data[i].postal_code;
+          var barAddress = data[i].street;
+          var barPhone = data[i].phone;
+          console.log(barZip);
+          console.log(barName);
+          console.log(barAddress);
+          console.log(barPhone);
+        
   
           //Setting the text of the h3 element and p element.
-          brewName.textContent = data[i].name;
+          // brewName.textContent = data[i].name;
           // brewStreet.textContent = data[i].street;
           // brewCity.textContent = data[i].city;
           // brewState.textContent = data[i].state;
-          brewZip.textContent = data[i].postal_code;
+          // brewZip.textContent = data[i].postal_code;
+          // var brewName = document.createElement('h3');
+          // var brewZip = document.createElement('p');
   
           //Appending the dynamically generated html to the div associated with the id="users"
           //Append will attach the element as the bottom most child.
-          breweriesContainer.append(brewName);
-          breweriesContainer.append(brewZip);
+          // breweriesContainer.append(brewName);
+          // breweriesContainer.append(brewZip);
         }
       });
   }
@@ -78,5 +102,6 @@ function getApii() {
             }
         });
 }
+document.getElementById("list1").addEventListener("click",listQ)
 regionalButton.addEventListener('click', getApi)
 fetchButton.addEventListener('click', getApii);
