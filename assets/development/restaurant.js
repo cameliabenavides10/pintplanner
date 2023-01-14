@@ -11,7 +11,7 @@ const options = {
             }
         }
         
-function getApii() {
+function getApi() {
   let locationsURL = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/zipcode'
     locationsURL = locationsURL + "/" + locationZip + "/10"
 
@@ -41,13 +41,13 @@ function getApii() {
     });
 }
         
-        let storeName = restaurantChoice
-        storedRestChoice = JSON.parse(localStorage.getItem("storeName")) || [];
-        storedRestChoice.push(storeName);
-        localStorage.setItem("storeName", JSON.stringify(storedRestChoice));
+        // let storeName = restaurantChoice
+        // storedRestChoice = JSON.parse(localStorage.getItem("storeName")) || [];
+        // storedRestChoice.push(storeName);
+        // localStorage.setItem("storeName", JSON.stringify(storedRestChoice));
 
+// fetchButton.addEventListener('click', getApi);
 fetchButton.addEventListener('click', getApi);
-fetchButton.addEventListener('click', getApii);
 
 // function restaurantChoice(event) {
 //   if (!event) var event = window.event;

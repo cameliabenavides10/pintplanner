@@ -25,8 +25,6 @@ var contractButton = document.getElementById('contract');
 //   console.log(brewValue);
   
 // };
-
-
 function getButton(event){  
   console.log('get button ran') 
   console.log("event", event.target.id)
@@ -46,7 +44,6 @@ function getButton(event){
      getApi(); 
     };
    
-
 function getApi() {
   var requestUrl = "https://api.openbrewerydb.org/breweries?by_city=austin&per_page=50&by_type=" + brewType;
     fetch(requestUrl)
@@ -92,17 +89,7 @@ function getApi() {
           // });
         }
       });
-
-    
-
   }
-
-  
-
-
-
-
-
 
 const options = {
     method: 'GET',
@@ -142,8 +129,6 @@ function getApii() {
         });
 }
 // document.getElementById("list1").addEventListener("click",listQ)
-
-
 
 regionalButton.addEventListener('click', getButton);
 microButton.addEventListener('click', getButton);
