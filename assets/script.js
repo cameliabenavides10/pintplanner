@@ -13,6 +13,7 @@ var contractButton = document.getElementById('contract');
 var brewChoice = "";
 var brewChoiceZip = "";
 var selectedBrewery = {};
+var badZip = ['78703', '78721', '78723', '78727', '78732', '78733', '78734', '78736', '78737', '78742', '78744', '78746', '78749', '78751', '78752', '78756'];
 
 //GETTING VALUES AND CREATING A DYNAMIC VALUE BASED ON USER CHOICE WHILE TRYING TO INSERT IT INTO URL 
 // var brewOption = document.getElementById("list1");
@@ -45,7 +46,7 @@ function getButton(event){
     };
    
 function getApi() {
-  var requestUrl = "https://api.openbrewerydb.org/breweries?by_city=austin&per_page=50&by_type=" + brewType;
+  var requestUrl = "https://api.openbrewerydb.org/breweries?by_city=austin&by_postal=78&per_page=50&by_type=" + brewType;
     fetch(requestUrl)
       .then(function (response) {
         return response.json();
@@ -95,17 +96,19 @@ function getApi() {
             
             // build obj var to pass choice to restaurant function and results
             selectedBrewery.brewName = $(this).attr("name");
-            selectedBrewery.brewChoiceZip = $(this).attr("postal_code");
-            
-
-            localStorage.setItem("selectedBrewery", JSON.stringify(selectedBrewery));
-             
-            console.log('object passed to local storage: ' + JSON.stringify(selectedBrewery));
-
+            selectedBrewery.brewChoiceZip = $(this).attr("postal_code").split('-', 1).pop();
+            let zipCompare = selectedBrewery.brewChoiceZip;
+            console.log(zipCompare);
+            console.log(badZip.includes(zipCompare));
+            if (badZip.includes(zipCompare)){
+              selectedBrewery.brewChoiceZip='787';
+            };
+  
             brewChoice=$(this).text();
             brewChoiceZip=$(this).next().text();
             console.log(brewChoiceZip);
             console.log('Brewery type '+ JSON.stringify(selectedBrewery) + ' was clicked ')
+            localStorage.setItem("selectedBrewery", JSON.stringify(selectedBrewery));
 
            });
         }
