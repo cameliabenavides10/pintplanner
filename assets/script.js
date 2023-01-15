@@ -115,7 +115,7 @@ function getApi() {
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '46164f71f4msh24d65c9eecf4879p1c3ec4jsnd8b0ebced189',
+        'X-RapidAPI-Key': ' ',
         'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
     } // Camelia's API Key
 }
