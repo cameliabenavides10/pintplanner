@@ -25,8 +25,6 @@ var brewChoiceZip = "";
 //   console.log(brewValue);
   
 // };
-
-
 function getButton(event){  
   console.log('get button ran') 
   console.log("event", event.target.id)
@@ -46,7 +44,6 @@ function getButton(event){
      getApi(); 
     };
    
-
 function getApi() {
   var requestUrl = "https://api.openbrewerydb.org/breweries?by_city=austin&per_page=50&by_type=" + brewType;
     fetch(requestUrl)
@@ -98,17 +95,7 @@ function getApi() {
            });
         }
       });
-
-    
-
   }
-
-  
-
-
-
-
-
 
 const options = {
     method: 'GET',
@@ -137,19 +124,17 @@ function getApii() {
 
 
                 restaurantName.textContent = restaurant.restaurantName;
-                restraurantAddress.textContent = restaurant.address + restaurant.zipCode;
+                restraurantAddress.textContent = restaurant.address + " ," + restaurant.zipCode +" ,"+ restaurant.cuisineType;
                 restaurantChoiceContainer.append(restaurantName);
                 restaurantChoiceContainer.append(restraurantAddress);
 
                 $(`#${restaurantName.id}`).on("click", function () {
-                    console.log('restaurant name' + restaurant.restaurantName + 'was clicked')
+                    console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
                 });
             }
         });
 }
 // document.getElementById("list1").addEventListener("click",listQ)
-
-
 
 regionalButton.addEventListener('click', getButton);
 microButton.addEventListener('click', getButton);
