@@ -45,7 +45,7 @@ function getButton(event){
     };
    
 function getApi() {
-  var requestUrl = "https://api.openbrewerydb.org/breweries?by_city=austin&per_page=50&by_type=" + brewType;
+  var requestUrl = "https://api.openbrewerydb.org/breweries?by_city=austin&by_postal=78&per_page=50&by_type=" + brewType;
     fetch(requestUrl)
       .then(function (response) {
         return response.json();
