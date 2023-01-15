@@ -1,7 +1,7 @@
 let locationZip = "787";
 let restaurantChoiceContainer = document.getElementById('restaurants');
 let restaurantName = document.getElementById('items');
-let restaurantChoice = "";
+let restaurantChoice = ""
 let fetchButton = document.getElementById('submit-activities');  // karen
 const options = {
             method: 'GET',
@@ -24,27 +24,49 @@ function getApi() {
    
         let restaurant = data.restaurants[i];
         
+       
         let restaurantName = document.createElement('h3'); 
         restaurantName.id = `restaurant${i}`
+        restaurantName.setAttribute("restaurantName", restaurant.restaurantName);
+        restaurantName.setAttribute("address", restaurant.address);
+        restaurantName.setAttribute("zipCode", restaurant.zipCode);
+        restaurantName.setAttribute("website", restaurant.website);
+        restaurantName.setAttribute("cuisineType", restaurant.cuisineType);
         let restraurantAddress = document.createElement('p');
-       
+      
+
+
 
         restaurantName.textContent = restaurant.restaurantName;
-        restraurantAddress.textContent= restaurant.address + " ," + restaurant.zipCode +" ,"+ restaurant.cuisineType;
+        restraurantAddress.textContent= restaurant.address + " ," + restaurant.zipCode + " , " + restaurant.cuisineType + " \n " + restaurant.website;
         restaurantChoiceContainer.append(restaurantName);
         restaurantChoiceContainer.append(restraurantAddress);
 
         $(`#${restaurantName.id}`).on("click", function() {
+          var selectedRestaurant = {
+            restaurantName: $(this).attr("restaurantName"),
+            address: $(this).attr("address"),
+            zipCode:$(this).attr("zipCode"),
+            website: $(this).attr("website"),
+            cuisineType:$(this).attr("cuisineType")
+          }
+
+        localStorage.setItem("selectedRestaurant", JSON.stringify(selectedRestaurant));
          console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
+         
+        //  let storedName = selectedRestaurant
+        //   selectedRestaurant = JSON.parse(localStorage.getItem("storeName")) || [];
+        //   selectedRestaurant.push(storedName);
+        //   localStorage.setItem("storeName", JSON.stringify(storedName));
         });
       }
     });
 }
         
-        // let storeName = restaurantChoice
-        // storedRestChoice = JSON.parse(localStorage.getItem("storeName")) || [];
-        // storedRestChoice.push(storeName);
-        // localStorage.setItem("storeName", JSON.stringify(storedRestChoice));
+        // let storedName = selectedRestaurant
+        // selectedRestaurant = JSON.parse(localStorage.getItem("storeName")) || [];
+        // selectedRestaurant.push(storedName);
+        // localStorage.setItem("storeName", JSON.stringify(storedName));
 
 // fetchButton.addEventListener('click', getApi);
 fetchButton.addEventListener('click', getApi);
