@@ -1,4 +1,4 @@
-let locationZip = "787";
+let locationZip = ""; // was "787"
 let restaurantChoiceContainer = document.getElementById('restaurants');
 let restaurantName = document.getElementById('items');
 let restaurantChoice = "";
@@ -12,7 +12,7 @@ var regionalButton = document.getElementById('regional');
 var contractButton = document.getElementById('contract');
 var brewChoice = "";
 var brewChoiceZip = "";
-
+var selectedBrewery = {};
 
 //GETTING VALUES AND CREATING A DYNAMIC VALUE BASED ON USER CHOICE WHILE TRYING TO INSERT IT INTO URL 
 // var brewOption = document.getElementById("list1");
@@ -60,8 +60,11 @@ function getApi() {
           var brewName = data[i].name;
           var brewZip = data[i].postal_code;
 
-              brewName = document.createElement('h3');
-              brewName.id = `data${i}`
+          brewName = document.createElement('h3');
+          brewName.id = `data${i}`
+          
+
+
               brewZip = document.createElement('p');
               brewName.textContent = data[i].name;
               brewZip.textContent = data[i].postal_code;
@@ -85,36 +88,51 @@ function getApi() {
           //Append will attach the element as the bottom most child.
           breweriesContainer.append(brewName);
           breweriesContainer.append(brewZip);
+          brewName.setAttribute("name", brewName.textContent);
+          brewName.setAttribute("postal_code", brewZip.textContent);
 
            $(`#${brewName.id}`).on("click", function (event) {
             
+            // build obj var to pass choice to restaurant function and results
+            selectedBrewery.brewName = $(this).attr("name");
+            selectedBrewery.brewChoiceZip = $(this).attr("postal_code");
+            
+
+            localStorage.setItem("selectedBrewery", JSON.stringify(selectedBrewery));
+             
+            console.log('object passed to local storage: ' + JSON.stringify(selectedBrewery));
+
             brewChoice=$(this).text();
             brewChoiceZip=$(this).next().text();
             console.log(brewChoiceZip);
-             console.log('Brewery type '+ brewChoice + ' was clicked ')
+            console.log('Brewery type '+ JSON.stringify(selectedBrewery) + ' was clicked ')
+
            });
         }
       });
   }
-
+// START OF RESTAURANT CONTAINER
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': 'e045ca9b9amsha0dbbe5302d76a2p14b6a8jsnfe609301f0a7',
+        'X-RapidAPI-Key': '46164f71f4msh24d65c9eecf4879p1c3ec4jsnd8b0ebced189',
         'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
-    }
+    } // Camelia's API Key
 }
 
 function getApii() {
     let locationsURL = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/zipcode'
+    locationZip = selectedBrewery.brewChoiceZip;
     locationsURL = locationsURL + "/" + locationZip + "/10"
+
+    console.log(locationsURL);  
 
     fetch(locationsURL, options)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            for (var i = 0; i < data.restaurants.length; i++) {
+          for (var i = 0; i < data.restaurants.length; i++) {
 
                 let restaurant = data.restaurants[i];
 
@@ -124,7 +142,7 @@ function getApii() {
 
 
                 restaurantName.textContent = restaurant.restaurantName;
-                restraurantAddress.textContent = restaurant.address + " ," + restaurant.zipCode +" ,"+ restaurant.cuisineType;
+                restraurantAddress.textContent= restaurant.address + " ," + restaurant.zipCode + " , " + restaurant.cuisineType + " \n " + restaurant.website;
                 restaurantChoiceContainer.append(restaurantName);
                 restaurantChoiceContainer.append(restraurantAddress);
 
