@@ -10,8 +10,8 @@ var microButton = document.getElementById('micro');
 var brewpubButton = document.getElementById('brewpub');
 var regionalButton = document.getElementById('regional');
 var contractButton = document.getElementById('contract');
-
-
+var brewChoice = "";
+var brewChoiceZip = "";
 
 
 //GETTING VALUES AND CREATING A DYNAMIC VALUE BASED ON USER CHOICE WHILE TRYING TO INSERT IT INTO URL 
@@ -59,10 +59,13 @@ function getApi() {
           
           var brewName = data[i].name;
           var brewZip = data[i].postal_code;
+
               brewName = document.createElement('h3');
+              brewName.id = `data${i}`
               brewZip = document.createElement('p');
               brewName.textContent = data[i].name;
               brewZip.textContent = data[i].postal_code;
+              console.log(brewName.id);
           // var barAddress = data[i].street;
           // var barPhone = data[i].phone;
           // console.log(barZip);
@@ -76,7 +79,6 @@ function getApi() {
           // brewStreet.textContent = data[i].street;
           // brewCity.textContent = data[i].city;
           // brewState.textContent = data[i].state;
-        
           
   
           //Appending the dynamically generated html to the div associated with the id="users"
@@ -84,9 +86,13 @@ function getApi() {
           breweriesContainer.append(brewName);
           breweriesContainer.append(brewZip);
 
-          // $(`#${brewButtons.id}`).on("click", function (event) {
-          //   console.log('Brewery type' + event.target + 'was clicked')
-          // });
+           $(`#${brewName.id}`).on("click", function (event) {
+            
+            brewChoice=$(this).text();
+            brewChoiceZip=$(this).next().text();
+            console.log(brewChoiceZip);
+             console.log('Brewery type '+ brewChoice + ' was clicked ')
+           });
         }
       });
   }
@@ -118,12 +124,12 @@ function getApii() {
 
 
                 restaurantName.textContent = restaurant.restaurantName;
-                restraurantAddress.textContent = restaurant.address + restaurant.zipCode;
+                restraurantAddress.textContent = restaurant.address + " ," + restaurant.zipCode +" ,"+ restaurant.cuisineType;
                 restaurantChoiceContainer.append(restaurantName);
                 restaurantChoiceContainer.append(restraurantAddress);
 
                 $(`#${restaurantName.id}`).on("click", function () {
-                    console.log('restaurant name' + restaurant.restaurantName + 'was clicked')
+                    console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
                 });
             }
         });

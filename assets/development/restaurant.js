@@ -30,12 +30,12 @@ function getApi() {
        
 
         restaurantName.textContent = restaurant.restaurantName;
-        restraurantAddress.textContent= restaurant.address + "," + restaurant.zipCode +","+ restaurant.cuisineType;
+        restraurantAddress.textContent= restaurant.address + " ," + restaurant.zipCode +" ,"+ restaurant.cuisineType;
         restaurantChoiceContainer.append(restaurantName);
         restaurantChoiceContainer.append(restraurantAddress);
 
         $(`#${restaurantName.id}`).on("click", function() {
-         console.log('restaurant name' + restaurant.restaurantName + 'was clicked')
+         console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
         });
       }
     });
