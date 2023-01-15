@@ -65,7 +65,7 @@ function getApi() {
               brewZip = document.createElement('p');
               brewName.textContent = data[i].name;
               brewZip.textContent = data[i].postal_code;
-              console.log(brewName.id);
+              console.log("this is brewName.id " + brewName.id);
           // var barAddress = data[i].street;
           // var barPhone = data[i].phone;
           // console.log(barZip);
