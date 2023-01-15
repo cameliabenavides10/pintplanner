@@ -128,30 +128,47 @@ function getApii() {
     console.log(locationsURL);  
 
     fetch(locationsURL, options)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-          for (var i = 0; i < data.restaurants.length; i++) {
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      for (var i = 0; i < data.restaurants.length; i++) {
+   
+        let restaurant = data.restaurants[i];
+        
+       
+        let restaurantName = document.createElement('h3'); 
+        restaurantName.id = `restaurant${i}`
+        restaurantName.setAttribute("restaurantName", restaurant.restaurantName);
+        restaurantName.setAttribute("address", restaurant.address);
+        restaurantName.setAttribute("zipCode", restaurant.zipCode);
+        restaurantName.setAttribute("website", restaurant.website);
+        restaurantName.setAttribute("cuisineType", restaurant.cuisineType);
+        let restraurantAddress = document.createElement('p');
+      
 
-                let restaurant = data.restaurants[i];
-
-                let restaurantName = document.createElement('h3');
-                restaurantName.id = `restaurant${i}`
-                let restraurantAddress = document.createElement('p');
 
 
-                restaurantName.textContent = restaurant.restaurantName;
-                restraurantAddress.textContent= restaurant.address + " ," + restaurant.zipCode + " , " + restaurant.cuisineType + " \n " + restaurant.website;
-                restaurantChoiceContainer.append(restaurantName);
-                restaurantChoiceContainer.append(restraurantAddress);
+        restaurantName.textContent = restaurant.restaurantName;
+        restraurantAddress.textContent= restaurant.address + " ," + restaurant.zipCode + " , " + restaurant.cuisineType + " \n " + restaurant.website;
+        restaurantChoiceContainer.append(restaurantName);
+        restaurantChoiceContainer.append(restraurantAddress);
 
-                $(`#${restaurantName.id}`).on("click", function () {
-                    console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
-                });
-            }
+        $(`#${restaurantName.id}`).on("click", function() {
+          var selectedRestaurant = {
+            restaurantName: $(this).attr("restaurantName"),
+            address: $(this).attr("address"),
+            zipCode:$(this).attr("zipCode"),
+            website: $(this).attr("website"),
+            cuisineType:$(this).attr("cuisineType")
+          }
+
+        localStorage.setItem("selectedRestaurant", JSON.stringify(selectedRestaurant));
+         console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
         });
-}
+      }
+    });
+  }
 // document.getElementById("list1").addEventListener("click",listQ)
 
 regionalButton.addEventListener('click', getButton);
