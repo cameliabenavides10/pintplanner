@@ -62,8 +62,10 @@ function getApi() {
       }
     });
 }
-        
-        // let storedName = selectedRestaurant
+//  to clear itemes from local storage = localStorage.clear();
+      
+
+// let storedName = selectedRestaurant
         // selectedRestaurant = JSON.parse(localStorage.getItem("storeName")) || [];
         // selectedRestaurant.push(storedName);
         // localStorage.setItem("storeName", JSON.stringify(storedName));
