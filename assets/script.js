@@ -1,7 +1,7 @@
 let locationZip = ""; // was "787"
 let restaurantChoiceContainer = document.getElementById('restaurants');
 let restaurantName = document.getElementById('items');
-let restaurantChoice = "";
+let restaurantChoice = document.createElement('p');
 let fetchButton = document.getElementById('submit-activities'); // karen
 var breweriesContainer = document.getElementById('breweries');
 var brewButtonPressed = ""
@@ -60,16 +60,18 @@ function getApi() {
           
           var brewName = data[i].name;
           var brewZip = data[i].postal_code;
+          var brewStreet = data[i].street;
 
           brewName = document.createElement('h3');
           brewName.id = `data${i}`
           
 
-
+              brewStreet = document.createElement('p');
               brewZip = document.createElement('p');
               brewName.textContent = data[i].name;
               brewZip.textContent = data[i].postal_code;
-              console.log(brewName.id);
+              brewStreet.textContent = data[i].street;
+              console.log("this is brewName.id " + brewName.id);
           // var barAddress = data[i].street;
           // var barPhone = data[i].phone;
           // console.log(barZip);
@@ -89,13 +91,16 @@ function getApi() {
           //Append will attach the element as the bottom most child.
           breweriesContainer.append(brewName);
           breweriesContainer.append(brewZip);
+          breweriesContainer.append(brewStreet);
           brewName.setAttribute("name", brewName.textContent);
           brewName.setAttribute("postal_code", brewZip.textContent);
+          brewName.setAttribute("street", brewStreet.textContent);
 
            $(`#${brewName.id}`).on("click", function (event) {
             
             // build obj var to pass choice to restaurant function and results
             selectedBrewery.brewName = $(this).attr("name");
+            selectedBrewery.brewStreet = $(this).attr("street");
             selectedBrewery.brewChoiceZip = $(this).attr("postal_code").split('-', 1).pop();
             let zipCompare = selectedBrewery.brewChoiceZip;
             console.log(zipCompare);
@@ -158,24 +163,77 @@ function getApii() {
         restaurantChoiceContainer.append(restraurantAddress);
 
         $(`#${restaurantName.id}`).on("click", function() {
-          var selectedRestaurant = {
+            var selectedRestaurant = {
             restaurantName: $(this).attr("restaurantName"),
             address: $(this).attr("address"),
             zipCode:$(this).attr("zipCode"),
             website: $(this).attr("website"),
             cuisineType:$(this).attr("cuisineType")
           }
+         
 
         localStorage.setItem("selectedRestaurant", JSON.stringify(selectedRestaurant));
          console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
+          results();
+         
+
         });
       }
     });
   }
 // document.getElementById("list1").addEventListener("click",listQ)
 
+
+// RESULTS CONTAINER
+
+function results(){
+
+
+
+let storedBrewery = JSON.parse(localStorage.getItem("selectedBrewery")) || [];
+let displayBrewery = document.getElementById("breweryTarget").append(storedBrewery.brewName);
+displayBrewery = document.getElementById("breweryTarget").append(storedBrewery.brewStreet);
+
+
+
+
+
+
+
+// displayBrewery.textContent= storedBrewery.brewName;
+// displayBrewery.textContent=storedBrewery.brewChoiceZip;
+
+
+
+
+
+//  let storedName = selectedRestaurant
+        let selectedRestaurant = JSON.parse(localStorage.getItem("selectedRestaurant")) || [];
+          // selectedRestaurant.push(storedName);
+          // console.log("this is " + selectedRestaurant);
+let displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.restaurantName);
+displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.address);
+displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.zipCode);
+displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.website);
+displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.cuisineType);
+
+
+// displayRestaurant.textContent= selectedRestaurant.restaurantName;
+// displayRestaurant.textContent= selectedRestaurant.address;
+// displayRestaurant.textContent= selectedRestaurant.zipCode;
+// displayRestaurant.textContent= selectedRestaurant.website;
+// displayRestaurant.textContent= selectedRestaurant.cuisineType;
+// document.getElementById('restaurantTarget').innerHTML = localStorage.selectedRestaurant;
+// restaurantChoice.append(displayRestaurant);
+
+
+}
+
+
 regionalButton.addEventListener('click', getButton);
 microButton.addEventListener('click', getButton);
 brewpubButton.addEventListener('click', getButton);
 contractButton.addEventListener('click', getButton);
 fetchButton.addEventListener('click', getApii);
+
+
