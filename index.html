@@ -19,29 +19,19 @@
 </head>
 
 <body>
-
-  <head class="header">
-
+  <head class="header"> 
 
     <div class="marketing-site-hero">
       <div class="marketing-site-hero-content">
         <h1> </h1>
-        <!-- <p class="subheader">A simple way to plan a fun night!</p> -->
-        <!-- <a href="#" class="round button">learn more</a> -->
+        <!-- Any content / navbars for the header? -->
       </div>
     </div>
-
-
   </head>
   <main>
+    <!-- Site intro / user instructions -->
     <h5>Select the type of brewery you would like to visit in Austin, TX. <br>
       We will show you restaurants around that area for some good eats afterwards!</h5>
-
-
-
-
-
-
 
     <!-- <select id="list1" class="dropdown-check-list" tabindex="100">
             <button class="dropbtn">Select</button>
@@ -53,13 +43,14 @@
             </div>
           </select> -->
 
-
+<!-- Brewery Container Card -->
     <div class="col s12 m7">
       <h2 class="header">Brew Card</h2>
       <div class="card horizontal">
         <div class="card-image">
           <img src="">
         </div>
+        <!-- Select type of Brewery -->
         <div id="brewButtons" class="card-stacked">
           <div class="card-content">
             <p>I am a very simple card. I am good at containing small bits of information.</p>
@@ -77,12 +68,14 @@
             Contract
           </button>
           <div class="card-action">
-            <div class="flex-column" id="breweries"></div>
-
+            <!-- Container for results of Brewery query -->
+            <div class="flex-column" id="breweries">
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- Restaurants Container Card -->
     <div id="restaurants" class="col s12 m7">
       <h2 class="header">Horizontal Card</h2>
       <div class="card horizontal">
@@ -93,19 +86,24 @@
           <div class="card-content">
             <p>I am a very simple card. I am good at containing small bits of information.</p>
           </div>
+          <!-- Button to start Restaurants query based on zip of brewery selected by user -->
           <button id="submit-activities">Submit</button>
           <div class="card-action">
             <a href="#">This is a link</a>
           </div>
         </div>
       </div>
+      <!-- Restaurant Results are currently appending here -->
     </div>
 <!--Start of Results container  -->
     <div id="results" class="col s12 m7">
       <h2 class="header">Your Itinerary</h2>
-      <div class="card horizontal">
+      <div class="card horizontal"> 
+        <!-- Container to display user selected brewery -->
         <div id="breweryTarget" class="card-image">
+
         </div>
+        <!-- Container to display user selected restaurant -->
         <div  id="restaurantTarget" class="card-stacked">
           <div class="card-content">
           </div>
