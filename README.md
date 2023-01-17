@@ -10,9 +10,9 @@ Trying to plan a day out? Which brewery? Which restaurants? This project helps b
 - [Deployment](#deployment)
 - [Features](#features)
 - [Usage](#usage)
+- [Development](#development)
 - [Credits](#credits)
 - [Authors](#authors)
-- [Development](#development)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
@@ -35,22 +35,6 @@ Simply open the browser to get started and follow these instructions.
 
 3. Your results are at the bottom of the page, if you'd like to restart just hit the clear button.
 
-## Credits
-
-Open Brewery Database API [Github](https://github.com/openbrewerydb/openbrewerydb#readme)
-
-Restaurants Near Me USA API [Rapid API](https://rapidapi.com/makingdatameaningful/api/restaurants-near-me-usa/)
-
-## Authors
-
-Camelia Benavides [Github](https://github.com/cameliabenavides10)
-
-Karen Peazooni [Github](https://github.com/kpeazzoni)
-
-Michael Smith [Github](https://github.com/AustinBQ02)
-
-Reuben Schmolke [Github](https://github.com/RoobyDoobster)
-
 ## Development
 
 We started with our wireframe below.
@@ -67,7 +51,21 @@ src="./assets/images/color-palette.png"
 alt="Color Palette"
 style="display: inline-block; margin: 0 auto; max-width: 300px">
 
+## Credits
 
+Open Brewery Database API [Github](https://github.com/openbrewerydb/openbrewerydb#readme)
+
+Restaurants Near Me USA API [Rapid API](https://rapidapi.com/makingdatameaningful/api/restaurants-near-me-usa/)
+
+## Authors
+
+Camelia Benavides [Github](https://github.com/cameliabenavides10)
+
+Karen Peazooni [Github](https://github.com/kpeazzoni)
+
+Michael Smith [Github](https://github.com/AustinBQ02)
+
+Reuben Schmolke [Github](https://github.com/RoobyDoobster)
 
 ## License
 
