@@ -4,10 +4,12 @@ var microButton = document.getElementById('micro');
 var brewpubButton = document.getElementById('brewpub');
 var regionalButton = document.getElementById('regional');
 var contractButton = document.getElementById('contract');
+var breweryButtonContainer = document.getElementById("brewButtons")
 var brewButtonPressed = ""  // is this still used?
 
 // Variables for Brewery results list
 var breweriesContainer = document.getElementById('breweries');
+var breweryContainerCard = document.getElementById('brewery-container-card');
 var selectedBrewery = {};
 var brewChoice = "";
 var brewChoiceZip = "";
@@ -22,7 +24,8 @@ let fetchButton = document.getElementById('submit-activities'); // karen
 // Variable for determining if brewery selected will have restaurant results
 var badZip = ['78703', '78721', '78723', '78727', '78732', '78733', '78734', '78736', '78737', '78742', '78744', '78746', '78749', '78751', '78752', '78756'];
 
-
+// results variables
+var resultsContainer=document.getElementById('results');
 
 // function to determine which brewery type was selected
 function getButton(event){  
@@ -30,7 +33,7 @@ function getButton(event){
   console.log("event", event.target.id)
   brewType=event.target.id;
   console.log(brewType);
-
+  breweryButtonContainer.classList="hide  "
     // call brewery query function based on selected brewery type
     getApi(); 
   };
@@ -90,7 +93,7 @@ function getApi() {
               selectedBrewery.brewChoiceZip='787';
   
             };
-            breweriesContainer.classList="hide";
+            breweryContainerCard.classList="hide";
             // save brewery info for use in restaurants and results functions
             brewChoice=$(this).text();
             brewChoiceZip=$(this).next().text();
@@ -193,6 +196,8 @@ function results(){
   displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.website);
   displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.cuisineType);
 }
+
+// TO DO: Clear Cache and start over button
 
 // functions for brewery type buttons and brewery selection / restaurant fetch button
 regionalButton.addEventListener('click', getButton);
