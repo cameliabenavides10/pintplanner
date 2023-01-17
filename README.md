@@ -16,6 +16,11 @@ Trying to plan a day out? Which brewery? Which restaurants? This project helps b
 
 GitHub Pages!
 
+## Features
+
+*[Look up a list of breweries based on the type you would like]
+*[Find a list of restaurants near the selected brewery]
+*[View your selected options and be able to restart by hitting the clear button]
 
 ## Usage
 
@@ -44,19 +49,21 @@ Reuben Schmolke[Github](https://github.com/RoobyDoobster)
 
 ## Development
 
-We started with our wireframe below
+We started with our wireframe below.
 
 <img
 src="./assets/images/Pint_planner_Wireframe.png"
 alt="Wireframe"
 style="display: inline-block; margin: 0 auto; max-width: 300px">
 
-We used the following color palette 
+We used the following color palette. 
 
 <img
 src="./assets/images/color-palette.png"
 alt="Color Palette"
 style="display: inline-block; margin: 0 auto; max-width: 300px">
+
+
 
 ## License
 
