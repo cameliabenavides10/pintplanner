@@ -1,132 +1,146 @@
 main {
-    background-color: #FFF3B0;
-    /* height: 400px!important; */
+  background-color: #FFF3B0;
+  /* height: 400px!important; */
 }
-
 
 html {
-line-height: 1.15;
+  line-height: 1.15;
 
 }
 
-
-
-p, h5 {
-  color: #9E2A2B!important;
+p,
+h5 {
+  color: #9E2A2B !important;
 }
 
-.header{
-  color: #540B0E!important;
+.header {
+  color: #540B0E !important;
 }
 
-#left-align{
-  margin-left: 33%!important;
+#left-align {
+  margin-left: 33% !important;
 }
 
 .btn {
-background-color: #335C67!important;
+  background-color: #335C67 !important;
 }
 
-body{
+body {
   margin: 2%;
 }
 
-#clear-margin{
- margin-bottom: 2%!important;
+#clear-margin {
+  margin-bottom: 2% !important;
 
 }
 
-
-p{
-  font-size: 25px!important;
+p {
+  font-size: 25px !important;
 }
 
-h5{
-    background-color: #FFF3B0;
-    text-align: center;
-   
-    margin-top: 0!important; 
-    font-style:normal;
-    padding-top: 50px;
-    
+h5 {
+  background-color: #FFF3B0;
+  text-align: center;
+
+  margin-top: 0 !important;
+  font-style: normal;
+  padding-top: 50px;
+
 }
 
 div {
- text-align: center;
+  text-align: center;
 
 }
 
-
-
-cite{
-       background-color: #CF6A00;
+cite {
+  background-color: #CF6A00;
 }
 
-#data0:hover, #data1:hover, #data2:hover, #data3:hover, #data4:hover, #data5:hover, #data6:hover, #data7:hover, #data8:hover, #data9:hover, #data10:hover, #data11:hover, #data12:hover, #data13:hover, #data14:hover, #data15:hover, #data16:hover, #data17:hover, #data18:hover, #data19:hover {
+#data0:hover,
+#data1:hover,
+#data2:hover,
+#data3:hover,
+#data4:hover,
+#data5:hover,
+#data6:hover,
+#data7:hover,
+#data8:hover,
+#data9:hover,
+#data10:hover,
+#data11:hover,
+#data12:hover,
+#data13:hover,
+#data14:hover,
+#data15:hover,
+#data16:hover,
+#data17:hover,
+#data18:hover,
+#data19:hover {
   cursor: pointer;
   background: #E09F3E;
   border: 1px solid #CF6A00;
-  color:#335C67;
+  color: #335C67;
 }
 
-#restaurant0:hover, #restaurant1:hover, #restaurant2:hover, #restaurant3:hover, #restaurant4:hover, #restaurant5:hover, #restaurant6:hover, #restaurant7:hover, #restaurant8:hover, #restaurant9:hover{
+#restaurant0:hover,
+#restaurant1:hover,
+#restaurant2:hover,
+#restaurant3:hover,
+#restaurant4:hover,
+#restaurant5:hover,
+#restaurant6:hover,
+#restaurant7:hover,
+#restaurant8:hover,
+#restaurant9:hover {
   cursor: pointer;
   background: #E09F3E;
   border: 1px solid #CF6A00;
-  color:#335C67;
+  color: #335C67;
 }
 
+.marketing-site-hero {
+  background: url("./images/beers123.jpg") top right no-repeat;
+  height: 55vh;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
 
-/* #restaurant0:, #restaurant1:hover, #restaurant2:hover, #restaurant3:hover, #restaurant4:hover, #restaurant5:hover, #restaurant6:hover, #restaurant7:hover, #restaurant8:hover, #restaurant9:hover{
-  cursor: pointer;
-} */
-
-
+@media screen and (min-width: 40em) {
   .marketing-site-hero {
-    background: url("./images/beers123.jpg") top right no-repeat;
-    height: 55vh;
-    background-size: cover;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    background-position: center center;
   }
-  
-  @media screen and (min-width: 40em) {
-    .marketing-site-hero {
-      background-position: center center;
-    }
-  }
-  
+}
+
+.marketing-site-hero-content {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.marketing-site-hero-content h1 {
+  font-size: 32px;
+}
+
+.marketing-site-hero-content .button.round {
+  border-radius: 5000px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 40em) {
   .marketing-site-hero-content {
-    max-width: 75rem;
-    margin: 0 auto;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 50%;
   }
-  
-  .marketing-site-hero-content h1 {
-    font-size: 32px;
-  }
-  
-  .marketing-site-hero-content .button.round {
-    border-radius: 5000px;
-    text-transform: uppercase;
-    font-size: 12px;
-    margin-bottom: 0;
-  }
-  
-  @media screen and (min-width: 40em) {
-    .marketing-site-hero-content {
-      padding-left: 50%;
-    }
-  }
+}
 
 .hide {
-  display:none;
+  display: none;
 }
-
-
-
