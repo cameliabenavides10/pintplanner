@@ -23,7 +23,7 @@ let fetchButton = document.getElementById('submit-activities'); // karen
 // Variable for determining if brewery selected will have restaurant results
 var badZip = ['78703', '78721', '78723', '78727', '78732', '78733', '78734', '78736', '78737', '78742', '78744', '78746', '78749', '78751', '78752', '78756'];
 
-
+var clearCache = document.getElementById('clear-button');
 
 // function to determine which brewery type was selected
 function getButton(event){  
@@ -195,13 +195,16 @@ function results(){
   displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.cuisineType);
 }
 
+function clearButton() {
+  localStorage.clear();
+  location.reload();
+}
 // functions for brewery type buttons and brewery selection / restaurant fetch button
 regionalButton.addEventListener('click', getButton);
 microButton.addEventListener('click', getButton);
 brewpubButton.addEventListener('click', getButton);
 contractButton.addEventListener('click', getButton);
 fetchButton.addEventListener('click', getRestaurantApi);
-
 //get rid of console.logs
 //remove let restaurantChoice
 // remove var brewButtonPressed
