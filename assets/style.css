@@ -62,7 +62,24 @@ cite{
        background-color: #CF6A00;
 }
 
+#data0:hover, #data1:hover, #data2:hover, #data3:hover, #data4:hover, #data5:hover, #data6:hover, #data7:hover, #data8:hover, #data9:hover, #data10:hover, #data11:hover, #data12:hover, #data13:hover, #data14:hover, #data15:hover, #data16:hover, #data17:hover, #data18:hover, #data19:hover {
+  cursor: pointer;
+  background: #E09F3E;
+  border: 1px solid #CF6A00;
+  color:#335C67;
+}
 
+#restaurant0:hover, #restaurant1:hover, #restaurant2:hover, #restaurant3:hover, #restaurant4:hover, #restaurant5:hover, #restaurant6:hover, #restaurant7:hover, #restaurant8:hover, #restaurant9:hover{
+  cursor: pointer;
+  background: #E09F3E;
+  border: 1px solid #CF6A00;
+  color:#335C67;
+}
+
+
+/* #restaurant0:, #restaurant1:hover, #restaurant2:hover, #restaurant3:hover, #restaurant4:hover, #restaurant5:hover, #restaurant6:hover, #restaurant7:hover, #restaurant8:hover, #restaurant9:hover{
+  cursor: pointer;
+} */
 
 
   .marketing-site-hero {

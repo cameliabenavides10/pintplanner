@@ -19,7 +19,7 @@ let locationZip = ""; // was "787"
 let restaurantChoiceContainer = document.getElementById('restaurants');
 let restaurantName = document.getElementById('items');
 //let restaurantChoice = document.createElement('p'); //I don't think we're using this
-let fetchButton = document.getElementById('submit-activities'); // karen
+// let fetchButton = document.getElementById('submit-activities'); // karen
 
 // Variable for determining if brewery selected will have restaurant results
 var badZip = ['78703', '78721', '78723', '78727', '78732', '78733', '78734', '78736', '78737', '78742', '78744', '78746', '78749', '78751', '78752', '78756'];
@@ -40,7 +40,7 @@ function getButton(event){
    
 // function to find breweries of selected type in Austin area  
 function getApi() {
-  var requestUrl = "https://api.openbrewerydb.org/breweries?by_city=austin&by_postal=78&per_page=50&by_type=" + brewType;
+  var requestUrl = "https://api.openbrewerydb.org/breweries?by_city=austin&by_postal=78&per_page=20&by_type=" + brewType;
     fetch(requestUrl)
       .then(function (response) {
         return response.json();
@@ -91,7 +91,6 @@ function getApi() {
             if (badZip.includes(zipCompare)){
               // if zip is bad, default to known good zip for entire area
               selectedBrewery.brewChoiceZip='787';
-  
             };
             breweryContainerCard.classList="hide";
             // save brewery info for use in restaurants and results functions
@@ -121,9 +120,9 @@ function getApi() {
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '23188ebbdcmsh7aeb3fccfa1534cp172313jsnbcc398cc377f',
+        'X-RapidAPI-Key': 'a21d4a375fmshc9eb4bf64e760f8p1e751ejsna643d2c9225f',
         'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
-    } // camelia's API Key    
+    } // Ruben's API Key    
 }
 
 // display a list of restuarants based on zip code of user selected brewery
@@ -148,6 +147,7 @@ function getRestaurantApi() {
         let restaurantName = document.createElement('h3'); 
         restaurantName.id = `restaurant${i}`
         restaurantName.setAttribute("restaurantName", restaurant.restaurantName);
+        restaurantName.style.border = "thick";
         restaurantName.setAttribute("address", restaurant.address);
         restaurantName.setAttribute("zipCode", restaurant.zipCode);
         restaurantName.setAttribute("website", restaurant.website);
@@ -156,7 +156,7 @@ function getRestaurantApi() {
       
         // populate restaurant details to placeholders
         restaurantName.textContent = restaurant.restaurantName;
-        restraurantAddress.textContent= restaurant.address + " ," + restaurant.zipCode + " , " + restaurant.cuisineType + " \n " + restaurant.website;
+        restraurantAddress.textContent= restaurant.address + " ," + restaurant.zipCode + "\n" + restaurant.cuisineType + "\n" + restaurant.website;
         restaurantChoiceContainer.append(restaurantName);
         restaurantChoiceContainer.append(restraurantAddress);
 
@@ -220,6 +220,7 @@ regionalButton.addEventListener('click', getButton);
 microButton.addEventListener('click', getButton);
 brewpubButton.addEventListener('click', getButton);
 contractButton.addEventListener('click', getButton);
+// fetchButton.addEventListener('click', getRestaurantApi);
 //get rid of console.logs
 //remove let restaurantChoice
 // remove var brewButtonPressed
