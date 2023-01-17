@@ -18,7 +18,7 @@ var brewChoiceZip = "";
 let locationZip = ""; // was "787"
 let restaurantChoiceContainer = document.getElementById('restaurants');
 let restaurantName = document.getElementById('items');
-let restaurantChoice = document.createElement('p');
+//let restaurantChoice = document.createElement('p'); //I don't think we're using this
 let fetchButton = document.getElementById('submit-activities'); // karen
 
 // Variable for determining if brewery selected will have restaurant results
@@ -29,8 +29,8 @@ var resultsContainer=document.getElementById('results');
 
 // function to determine which brewery type was selected
 function getButton(event){  
-  console.log('get button ran') 
-  console.log("event", event.target.id)
+  // console.log('get button ran') 
+  // console.log("event", event.target.id)
   brewType=event.target.id;
   console.log(brewType);
   breweryButtonContainer.classList="hide  "
@@ -46,8 +46,8 @@ function getApi() {
         return response.json();
       })
       .then(function (data) {
-        console.log(data)
-        //Using console.log to examine the data
+        // console.log(data)
+        // Using console.log to examine the data
        
         // LOOPING THRU INFO AND GETTING NAMES, ADDRESS, ZIP
         for (var i = 0; i < data.length; i++) {
@@ -64,7 +64,7 @@ function getApi() {
           brewName.textContent = data[i].name;
           brewZip.textContent = data[i].postal_code;
           brewStreet.textContent = data[i].street;
-            console.log("this is brewName.id " + brewName.id);
+            // console.log("this is brewName.id " + brewName.id);
          
           //Append will attach the element as the bottom most child.
           breweriesContainer.append(brewName);
@@ -86,8 +86,8 @@ function getApi() {
             console.log("selected brewery zip", selectedBrewery.brewChoiceZip);
             // compare zip of selected brewery to array of known bad zips 
             let zipCompare = selectedBrewery.brewChoiceZip;
-              console.log(zipCompare);
-              console.log(badZip.includes(zipCompare));
+              // console.log(zipCompare);
+              // console.log(badZip.includes(zipCompare));
             if (badZip.includes(zipCompare)){
               // if zip is bad, default to known good zip for entire area
               selectedBrewery.brewChoiceZip='787';
@@ -97,8 +97,8 @@ function getApi() {
             // save brewery info for use in restaurants and results functions
             brewChoice=$(this).text();
             brewChoiceZip=$(this).next().text();
-              console.log(brewChoiceZip);
-              console.log('Brewery type '+ JSON.stringify(selectedBrewery) + ' was clicked ')
+              // console.log(brewChoiceZip);
+              // console.log('Brewery type '+ JSON.stringify(selectedBrewery) + ' was clicked ')
 
             // pass brewery info to local storage  
             localStorage.setItem("selectedBrewery", JSON.stringify(selectedBrewery));
@@ -122,7 +122,7 @@ function getRestaurantApi() {
     locationZip = selectedBrewery.brewChoiceZip;
     locationsURL = locationsURL + "/" + locationZip + "/10"
 
-      console.log(locationsURL);  
+      // console.log(locationsURL);  
 
     fetch(locationsURL, options)
     .then(function (response) {
@@ -163,7 +163,7 @@ function getRestaurantApi() {
           restaurantChoiceContainer.classList="hide"; 
         // pass selected restaurant to local storage
         localStorage.setItem("selectedRestaurant", JSON.stringify(selectedRestaurant));
-         console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
+        //  console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
         
         // call the results function
         results();
@@ -199,9 +199,18 @@ function results(){
 
 // TO DO: Clear Cache and start over button
 
+// TO DO: Clear Cache and start over button
+
+function clearButton() {
+  localStorage.clear();
+  location.reload();
+}
 // functions for brewery type buttons and brewery selection / restaurant fetch button
 regionalButton.addEventListener('click', getButton);
 microButton.addEventListener('click', getButton);
 brewpubButton.addEventListener('click', getButton);
 contractButton.addEventListener('click', getButton);
 fetchButton.addEventListener('click', getRestaurantApi);
+//get rid of console.logs
+//remove let restaurantChoice
+// remove var brewButtonPressed
