@@ -46,7 +46,10 @@ Reuben Schmolke[Github](https://github.com/RoobyDoobster)
 
 We started with our wireframe below
 
-[Wireframe](./assets/images/Pint_planner_Wireframe.png)
+<img
+src="./assets/images/Pint_planner_Wireframe.png"
+alt="Wireframe"
+style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 We used
 
