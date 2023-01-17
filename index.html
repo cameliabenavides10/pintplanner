@@ -44,7 +44,7 @@
           </select> -->
 
 <!-- Brewery Container Card -->
-    <div class="col s12 m7">
+    <div id="brewery-container-card" class="col s12 m7">
       <h2 class="header">Brew Card</h2>
       <div class="card horizontal">
         <div class="card-image">
@@ -52,6 +52,10 @@
         </div>
         <!-- Select type of Brewery -->
         <div id="brewButtons" class="card-stacked">
+          <div class="card-content">
+            <p>Regional - A regional location of an expanded brewery.<br> Micro - Most craft breweries. For example, Samual Adams is still considered a micro brewery. <br> Brewpub - A beer-focused restaurant or restaurant/bar with a brewery on-premise. <br>Contract - A brewery that uses another brewery’s equipment.
+              .</p>
+          </div>
           <button class="btn" id="regional">
             Regional
           </button>
@@ -64,20 +68,26 @@
           <button class="btn" id="contract">
             Contract
           </button>
-          <div class="card-action">
-            <!-- Container for results of Brewery query -->
-            <div class="flex-column" id="breweries">
-            </div>
-          </div>
         </div>
+          <!-- Container for results of Brewery query -->
+        
+          <div class="flex-column" id="breweries">
+          </div>
       </div>
     </div>
     <!-- Restaurants Container Card -->
     <div id="restaurants" class="col s12 m7">
-      <h2 class="header">Restaurants</h2>
+      <h3 class="header">Restaurants Located Near the Brewery</h3>
       <div class="card horizontal">
         <div class="card-image">
 
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>Once you choose a brewery, a list of restaurants will populate around the brewery you chose</p>
+          </div>  
+          <!-- <div class="card-action"> -->
+          </div>
         </div>
       </div>
       <!-- Restaurant Results are currently appending here -->
