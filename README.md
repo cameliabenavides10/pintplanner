@@ -43,6 +43,7 @@ We started with our wireframe below.
 src="./assets/images/Pint_planner_Wireframe.png"
 alt="Wireframe"
 style="display: inline-block; margin: 0 auto; max-width: 300px">
+
 [Wireframe](https://www.figma.com/file/xI8NdwBHwYa0Rs3ASuZl3T/DayTrip-Planner?node-id=1%3A538&t=Oa1BGRsT8s8aIFhT-1)
 
 We used the following color palette. 
