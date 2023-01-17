@@ -19,7 +19,8 @@
 </head>
 
 <body>
-  <head class="header"> 
+
+  <head class="header">
 
     <div class="marketing-site-hero">
       <div class="marketing-site-hero-content">
@@ -43,18 +44,20 @@
             </div>
           </select> -->
 
-<!-- Brewery Container Card -->
+    <!-- Brewery Container Card -->
     <div id="brewery-container-card" class="col s12 m7">
       <h2 class="header">Find a Brewery</h2>
-      <div >
+      <div>
         <div class="card-image">
 
         </div>
         <!-- Select type of Brewery -->
         <div id="brewButtons" class="card-stacked">
           <div class="card-content">
-            <p class="flow-text left-align" id="left-align"> Regional - A regional location of an expanded brewery.<br> Micro - Most craft breweries. <br> Brewpub - A beer-focused restaurant or with a brewery on-premise. <br>Contract - A brewery that uses another brewery’s equipment.
-              </p><br>
+            <p class="flow-text left-align" id="left-align"> Regional - A regional location of an expanded brewery.<br>
+              Micro - Most craft breweries. <br> Brewpub - A beer-focused restaurant or with a brewery on-premise.
+              <br>Contract - A brewery that uses another brewery’s equipment.
+            </p><br>
           </div>
           <button class="waves-effect waves-light btn" id="regional">
             Regional
@@ -69,10 +72,10 @@
             Contract
           </button>
         </div>
-          <!-- Container for results of Brewery query -->
-        
-          <div class="flex-column" id="breweries">
-          </div>
+        <!-- Container for results of Brewery query -->
+
+        <div class="flex-column" id="breweries">
+        </div>
       </div>
     </div>
     <!-- Restaurants Container Card -->
@@ -84,29 +87,45 @@
         </div>
         <div class="card-stacked">
           <div class="card-content">
-            <p class="flow-text">Once you choose a brewery, a list of restaurants will populate around the brewery you chose</p>
-          </div>  
-          <!-- <div class="card-action"> -->
+            <p class="flow-text">Once you choose a brewery, a list of restaurants will populate around the brewery you
+              chose</p>
           </div>
+          <!-- <div class="card-action"> -->
         </div>
       </div>
-      <!-- Restaurant Results are currently appending here -->
     </div>
-<!--Start of Results container  -->
+    <!-- Restaurant Results are currently appending here -->
+    </div>
+    <!--Start of Results container  -->
     <div id="results" class="col s12 m7">
       <h2 class="header">Your Itinerary</h2>
-      <div > 
+      <div>
         <!-- Container to display user selected brewery -->
         <div id="breweryTarget" style="font-size: 25px; color:#9E2A2B; margin-bottom: 2%" class="card-image">
+          <div id="brewAddressEl-Zero">
 
+          </div>
+          <div id="brewAddressEl-One">
+
+          </div>
         </div>
         <br>
         <!-- Container to display user selected restaurant -->
-        <div  id="restaurantTarget" style="font-size: 25px; color:#9E2A2B; margin-bottom: 2%" class="card-stacked">
+        <div id="restaurantTarget" style="font-size: 25px; color:#9E2A2B; margin-bottom: 2%" class="card-stacked">
           <div class="card-content">
+
           </div>
-          <div class="card-action">
+          <div id="resName" class="card-action">
+
+
+
           </div>
+          <ul>
+            <li id="li-One"></li>
+            <li id="li-Two"></li>
+            <li id="li-Three"></li>
+            <li id="li-Four"></li>
+          </ul>
         </div>
         <br>
         <div id="clear-button">

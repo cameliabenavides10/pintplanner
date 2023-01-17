@@ -107,11 +107,21 @@ function getApi() {
         }
       });
   }
+
+
+
+
+
+
+
+
+
+
 // START OF RESTAURANT CONTAINER
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '46164f71f4msh24d65c9eecf4879p1c3ec4jsnd8b0ebced189',
+        'X-RapidAPI-Key': '23188ebbdcmsh7aeb3fccfa1534cp172313jsnbcc398cc377f',
         'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
     } // camelia's API Key    
 }
@@ -183,18 +193,18 @@ function results(){
   let storedBrewery = JSON.parse(localStorage.getItem("selectedBrewery")) || [];
 
   // display selected brewery
-  let displayBrewery = document.getElementById("breweryTarget").append(storedBrewery.brewName);
-  displayBrewery = document.getElementById("breweryTarget").append(storedBrewery.brewStreet);
+  let displayBrewery = document.getElementById("brewAddressEl-Zero").append(storedBrewery.brewName);
+  let displayBreweryOne = document.getElementById("brewAddressEl-One").append(storedBrewery.brewStreet);
 
   // get selected restaurant info from local storage
   let selectedRestaurant = JSON.parse(localStorage.getItem("selectedRestaurant")) || [];
 
   // display selected restaurant
-  let displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.restaurantName);
-  displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.address);
-  displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.zipCode);
-  displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.website);
-  displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.cuisineType);
+  let displayRestaurantOne = document.getElementById("li-One").append(selectedRestaurant.address);
+  let displayRestaurantTwo = document.getElementById("li-Two").append(selectedRestaurant.zipCode);
+  let displayRestaurantThree = document.getElementById("li-Three").append(selectedRestaurant.website);
+  let displayRestaurantFour = document.getElementById("li-Four").append(selectedRestaurant.cuisineType);
+  let displayRestaurant = document.getElementById("resName").append(selectedRestaurant.restaurantName);
 }
 
 // TO DO: Clear Cache and start over button
@@ -210,7 +220,6 @@ regionalButton.addEventListener('click', getButton);
 microButton.addEventListener('click', getButton);
 brewpubButton.addEventListener('click', getButton);
 contractButton.addEventListener('click', getButton);
-fetchButton.addEventListener('click', getRestaurantApi);
 //get rid of console.logs
 //remove let restaurantChoice
 // remove var brewButtonPressed
