@@ -7,12 +7,16 @@ Trying to plan a day out? Which brewery? Which restaurants? This project helps b
 
 ## Table of Contents (Optional)
 
-- [Installation](#installation)
+- [Deployment](#deployment)
+- [Features](#features)
 - [Usage](#usage)
 - [Credits](#credits)
+- [Authors](#authors)
+- [Development](#development)
 - [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-## Installation
+## Deployment
 
 GitHub Pages!
 
@@ -33,19 +37,19 @@ Simply open the browser to get started and follow these instructions.
 
 ## Credits
 
-Open Brewery Database API[Github](https://github.com/openbrewerydb/openbrewerydb#readme)
+Open Brewery Database API [Github](https://github.com/openbrewerydb/openbrewerydb#readme)
 
-Restaurants Near Me USA API[Rapid API](https://rapidapi.com/makingdatameaningful/api/restaurants-near-me-usa/)
+Restaurants Near Me USA API [Rapid API](https://rapidapi.com/makingdatameaningful/api/restaurants-near-me-usa/)
 
 ## Authors
 
-Camelia Benavides[Github](https://github.com/cameliabenavides10)
+Camelia Benavides [Github](https://github.com/cameliabenavides10)
 
-Karen Peazooni[Github](https://github.com/kpeazzoni)
+Karen Peazooni [Github](https://github.com/kpeazzoni)
 
-Michael Smith[Github](https://github.com/AustinBQ02)
+Michael Smith [Github](https://github.com/AustinBQ02)
 
-Reuben Schmolke[Github](https://github.com/RoobyDoobster)
+Reuben Schmolke [Github](https://github.com/RoobyDoobster)
 
 ## Development
 
@@ -71,3 +75,7 @@ Please see LICENSE file.
 
 ## Acknowledgments
 
+- [RapidAPI](https://rapidapi.com/hub)
+- [Materialize](https://materializecss.com)
+- [W3Schools](https://www.w3schools.com)
+- [Stack OverFlow](https://stackoverflow.com)
