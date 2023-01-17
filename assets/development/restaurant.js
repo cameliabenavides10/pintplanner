@@ -94,4 +94,6 @@ fetchButton.addEventListener('click', getApi);
     // karen's API keys that have hit the limit: 'X-RapidAPI-Key': '495e45f322msh4fca825b3c3afa3p19ec03jsnd3b134bddfbd',
                 // 'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
 
+                // Karen's new API key - c0e1c346famsh73cf250a170cda0p14f695jsna7ff3f6148f7
+
                

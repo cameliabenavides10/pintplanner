@@ -81,16 +81,17 @@ function getApi() {
             
             // remove zip+4 info, restuarants query only takes 5 digit zips
             selectedBrewery.brewChoiceZip = $(this).attr("postal_code").split('-', 1).pop();
-            
-            // compare zip of selected brewery to array of known bad zips
+            console.log("selected brewery zip", selectedBrewery.brewChoiceZip);
+            // compare zip of selected brewery to array of known bad zips 
             let zipCompare = selectedBrewery.brewChoiceZip;
               // console.log(zipCompare);
               // console.log(badZip.includes(zipCompare));
             if (badZip.includes(zipCompare)){
               // if zip is bad, default to known good zip for entire area
               selectedBrewery.brewChoiceZip='787';
+  
             };
-            
+            breweriesContainer.classList="hide";
             // save brewery info for use in restaurants and results functions
             brewChoice=$(this).text();
             brewChoiceZip=$(this).next().text();
@@ -99,6 +100,7 @@ function getApi() {
 
             // pass brewery info to local storage  
             localStorage.setItem("selectedBrewery", JSON.stringify(selectedBrewery));
+            getRestaurantApi()
            });
         }
       });
@@ -107,13 +109,13 @@ function getApi() {
 const options = {
     method: 'GET',
     headers: {
-        // 'X-RapidAPI-Key': 'a21d4a375fmshc9eb4bf64e760f8p1e751ejsna643d2c9225f',
+        'X-RapidAPI-Key': '46164f71f4msh24d65c9eecf4879p1c3ec4jsnd8b0ebced189',
         'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
-    } // Reuben's API Key
+    } // camelia's API Key    
 }
 
 // display a list of restuarants based on zip code of user selected brewery
-function getApii() {
+function getRestaurantApi() {
     let locationsURL = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/zipcode'
     locationZip = selectedBrewery.brewChoiceZip;
     locationsURL = locationsURL + "/" + locationZip + "/10"
@@ -125,6 +127,7 @@ function getApii() {
       return response.json();
     })
     .then(function (data) {
+      console.log(data)
       for (var i = 0; i < data.restaurants.length; i++) {
         // loop through restaurant data returned from query
         let restaurant = data.restaurants[i];
@@ -155,7 +158,7 @@ function getApii() {
             website: $(this).attr("website"),
             cuisineType:$(this).attr("cuisineType")
           }
-         
+          restaurantChoiceContainer.classList="hide"; 
         // pass selected restaurant to local storage
         localStorage.setItem("selectedRestaurant", JSON.stringify(selectedRestaurant));
         //  console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
@@ -192,12 +195,12 @@ function results(){
   displayRestaurant = document.getElementById("restaurantTarget").append(selectedRestaurant.cuisineType);
 }
 
-// functions for brewery type buttons and brewery selection
+// functions for brewery type buttons and brewery selection / restaurant fetch button
 regionalButton.addEventListener('click', getButton);
 microButton.addEventListener('click', getButton);
 brewpubButton.addEventListener('click', getButton);
 contractButton.addEventListener('click', getButton);
-fetchButton.addEventListener('click', getApii);
+fetchButton.addEventListener('click', getRestaurantApi);
 
 //get rid of console.logs
 //remove let restaurantChoice
