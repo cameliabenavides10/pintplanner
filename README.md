@@ -51,7 +51,12 @@ src="./assets/images/Pint_planner_Wireframe.png"
 alt="Wireframe"
 style="display: inline-block; margin: 0 auto; max-width: 300px">
 
-We used
+We used the following color palette 
+
+<img
+src="./assets/images/color-palette.png"
+alt="Color Palette"
+style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 ## License
 
