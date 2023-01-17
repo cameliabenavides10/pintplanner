@@ -18,9 +18,9 @@ GitHub Pages!
 
 ## Features
 
-*[Look up a list of breweries based on the type you would like]
-*[Find a list of restaurants near the selected brewery]
-*[View your selected options and be able to restart by hitting the clear button]
+* Look up a list of breweries based on the type you would like
+* Find a list of restaurants near the selected brewery
+* View your selected options and be able to restart by hitting the clear button
 
 ## Usage
 
