@@ -7,48 +7,73 @@ Trying to plan a day out? Which brewery? Which restaurants? This project helps b
 
 ## Table of Contents (Optional)
 
-- [Installation](#installation)
+- [Deployment](#deployment)
+- [Features](#features)
 - [Usage](#usage)
+- [Development](#development)
 - [Credits](#credits)
+- [Authors](#authors)
 - [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-## Installation
+## Deployment
 
 GitHub Pages!
 
+## Features
+
+* Look up a list of breweries based on the type you would like
+* Find a list of restaurants near the selected brewery
+* View your selected options and be able to restart by hitting the clear button
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Simply open the browser to get started and follow these instructions.
+1. Click on the type of brewery you would like to go to.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+2. Click on the restaurant you would like to go to.
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+3. Your results are at the bottom of the page, if you'd like to restart just hit the clear button.
+
+## Development
+
+We started with our wireframe below.
+
+<img
+src="./assets/images/Pint_planner_Wireframe.png"
+alt="Wireframe"
+style="display: inline-block; margin: 0 auto; max-width: 300px">
+
+We used the following color palette. 
+
+<img
+src="./assets/images/color-palette.png"
+alt="Color Palette"
+style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Open Brewery Database API [Github](https://github.com/openbrewerydb/openbrewerydb#readme)
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+Restaurants Near Me USA API [Rapid API](https://rapidapi.com/makingdatameaningful/api/restaurants-near-me-usa/)
 
-If you followed tutorials, include links to those here as well.
+## Authors
 
-README outline from [https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide](Professional Readme Guide).
+Camelia Benavides [Github](https://github.com/cameliabenavides10)
+
+Karen Peazooni [Github](https://github.com/kpeazzoni)
+
+Michael Smith [Github](https://github.com/AustinBQ02)
+
+Reuben Schmolke [Github](https://github.com/RoobyDoobster)
 
 ## License
 
 Please see LICENSE file.
 
-## Features
+## Acknowledgments
 
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+- [RapidAPI](https://rapidapi.com/hub)
+- [Materialize](https://materializecss.com)
+- [W3Schools](https://www.w3schools.com)
+- [Stack OverFlow](https://stackoverflow.com)

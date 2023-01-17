@@ -5,7 +5,6 @@ var brewpubButton = document.getElementById('brewpub');
 var regionalButton = document.getElementById('regional');
 var contractButton = document.getElementById('contract');
 var breweryButtonContainer = document.getElementById("brewButtons")
-var brewButtonPressed = ""  // is this still used?
 
 // Variables for Brewery results list
 var breweriesContainer = document.getElementById('breweries');
