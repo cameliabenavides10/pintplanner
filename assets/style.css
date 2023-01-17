@@ -1,29 +1,61 @@
 main {
-    background-color: #fce3ca;
+    background-color: #FFF3B0;
     /* height: 400px!important; */
 }
-/* h1 {
-   
-    text-align: left;
-    font-weight: bold;
-    color: white!important;
-    padding: 4%;
-    margin-bottom:0!important;
-    font-style: normal;
-    font-size: 40px!important;
-   background: rgba(211, 187, 181, 0.5);
-    
-} */
+
+
+html {
+line-height: 1.15;
+
+}
+
+
+
+p, h5 {
+  color: #9E2A2B!important;
+}
+
+.header{
+  color: #540B0E!important;
+}
+
+#left-align{
+  margin-left: 33%!important;
+}
+
+.btn {
+background-color: #335C67!important;
+}
+
+body{
+  margin: 2%;
+}
+
+#clear-margin{
+ margin-bottom: 2%!important;
+
+}
+
+
+p{
+  font-size: 25px!important;
+}
 
 h5{
-    background-color: #fce3ca;
+    background-color: #FFF3B0;
     text-align: center;
-    color: white!important;
+   
     margin-top: 0!important; 
     font-style:normal;
     padding-top: 50px;
     
 }
+
+div {
+ text-align: center;
+
+}
+
 
 
 cite{
@@ -81,54 +113,3 @@ cite{
 
 
 
-  .dropbtn {
-    background-color: #CF6A00!important;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    margin: auto;
-    width: 50%;
-    border: 3px solid #f9f9f9;
-    padding: 5px;
-    
-  }
-
-  .dropdown-check-list {
-    position: relative;
-    display: inline-block;
-    margin: 0 auto;
-    width: 50%;
-    display: flex;
-    
-  }
-  
-  .beer-select {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    width: 260px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  option {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    align-items: center;
-  }
-
-  option:hover{
-    background-color: #ceacac
-}
-
-.dropdown-check-list:hover .beer-select {
-    display: block;
-}
-
-.dropdown-check-list:hover .dropbtn {
-    background-color: #ca8338;
-} 
