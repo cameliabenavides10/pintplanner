@@ -4,7 +4,8 @@ var microButton = document.getElementById('micro');
 var brewpubButton = document.getElementById('brewpub');
 var regionalButton = document.getElementById('regional');
 var contractButton = document.getElementById('contract');
-var brewButtonPressed = ""  // is this still used?
+
+//var brewButtonPressed = ""  // is this still used? //I don't think so
 
 // Variables for Brewery results list
 var breweriesContainer = document.getElementById('breweries');
@@ -16,7 +17,7 @@ var brewChoiceZip = "";
 let locationZip = ""; // was "787"
 let restaurantChoiceContainer = document.getElementById('restaurants');
 let restaurantName = document.getElementById('items');
-let restaurantChoice = document.createElement('p');
+//let restaurantChoice = document.createElement('p'); //I don't think we're using this
 let fetchButton = document.getElementById('submit-activities'); // karen
 
 // Variable for determining if brewery selected will have restaurant results
@@ -26,10 +27,10 @@ var badZip = ['78703', '78721', '78723', '78727', '78732', '78733', '78734', '78
 
 // function to determine which brewery type was selected
 function getButton(event){  
-  console.log('get button ran') 
-  console.log("event", event.target.id)
+  // console.log('get button ran') 
+  // console.log("event", event.target.id)
   brewType=event.target.id;
-  console.log(brewType);
+  // console.log(brewType);
 
     // call brewery query function based on selected brewery type
     getApi(); 
@@ -43,8 +44,8 @@ function getApi() {
         return response.json();
       })
       .then(function (data) {
-        console.log(data)
-        //Using console.log to examine the data
+        // console.log(data)
+        // Using console.log to examine the data
        
         // LOOPING THRU INFO AND GETTING NAMES, ADDRESS, ZIP
         for (var i = 0; i < data.length; i++) {
@@ -61,7 +62,7 @@ function getApi() {
           brewName.textContent = data[i].name;
           brewZip.textContent = data[i].postal_code;
           brewStreet.textContent = data[i].street;
-            console.log("this is brewName.id " + brewName.id);
+            // console.log("this is brewName.id " + brewName.id);
          
           //Append will attach the element as the bottom most child.
           breweriesContainer.append(brewName);
@@ -83,8 +84,8 @@ function getApi() {
             
             // compare zip of selected brewery to array of known bad zips
             let zipCompare = selectedBrewery.brewChoiceZip;
-              console.log(zipCompare);
-              console.log(badZip.includes(zipCompare));
+              // console.log(zipCompare);
+              // console.log(badZip.includes(zipCompare));
             if (badZip.includes(zipCompare)){
               // if zip is bad, default to known good zip for entire area
               selectedBrewery.brewChoiceZip='787';
@@ -93,8 +94,8 @@ function getApi() {
             // save brewery info for use in restaurants and results functions
             brewChoice=$(this).text();
             brewChoiceZip=$(this).next().text();
-              console.log(brewChoiceZip);
-              console.log('Brewery type '+ JSON.stringify(selectedBrewery) + ' was clicked ')
+              // console.log(brewChoiceZip);
+              // console.log('Brewery type '+ JSON.stringify(selectedBrewery) + ' was clicked ')
 
             // pass brewery info to local storage  
             localStorage.setItem("selectedBrewery", JSON.stringify(selectedBrewery));
@@ -106,9 +107,9 @@ function getApi() {
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': ' ',
+        // 'X-RapidAPI-Key': 'a21d4a375fmshc9eb4bf64e760f8p1e751ejsna643d2c9225f',
         'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
-    } // Camelia's API Key
+    } // Reuben's API Key
 }
 
 // display a list of restuarants based on zip code of user selected brewery
@@ -117,7 +118,7 @@ function getApii() {
     locationZip = selectedBrewery.brewChoiceZip;
     locationsURL = locationsURL + "/" + locationZip + "/10"
 
-      console.log(locationsURL);  
+      // console.log(locationsURL);  
 
     fetch(locationsURL, options)
     .then(function (response) {
@@ -157,7 +158,7 @@ function getApii() {
          
         // pass selected restaurant to local storage
         localStorage.setItem("selectedRestaurant", JSON.stringify(selectedRestaurant));
-         console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
+        //  console.log('restaurant name ' + restaurant.restaurantName + ' was clicked')
         
         // call the results function
         results();
@@ -197,3 +198,7 @@ microButton.addEventListener('click', getButton);
 brewpubButton.addEventListener('click', getButton);
 contractButton.addEventListener('click', getButton);
 fetchButton.addEventListener('click', getApii);
+
+//get rid of console.logs
+//remove let restaurantChoice
+// remove var brewButtonPressed
