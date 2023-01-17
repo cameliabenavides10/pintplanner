@@ -5,7 +5,6 @@ var brewpubButton = document.getElementById('brewpub');
 var regionalButton = document.getElementById('regional');
 var contractButton = document.getElementById('contract');
 var breweryButtonContainer = document.getElementById("brewButtons")
-var brewButtonPressed = ""  // is this still used?
 
 // Variables for Brewery results list
 var breweriesContainer = document.getElementById('breweries');
@@ -18,7 +17,6 @@ var brewChoiceZip = "";
 let locationZip = ""; // was "787"
 let restaurantChoiceContainer = document.getElementById('restaurants');
 let restaurantName = document.getElementById('items');
-//let restaurantChoice = document.createElement('p'); //I don't think we're using this
 let fetchButton = document.getElementById('submit-activities'); // karen
 
 // Variable for determining if brewery selected will have restaurant results

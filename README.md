@@ -19,23 +19,28 @@ GitHub Pages!
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Simply open the browser to get started and follow these instructions.
+1. Click on the type of brewery you would like to go to.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+2. Click on the restaurant you would like to go to.
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+3. Your results are at the bottom of the page, if you'd like to restart just hit the clear button.
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+[openbrewerydb](https://github.com/openbrewerydb/openbrewerydb#readme)
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+[Restaurants near me USA](https://rapidapi.com/makingdatameaningful/api/restaurants-near-me-usa/)
 
-If you followed tutorials, include links to those here as well.
+## Authors
 
-README outline from [https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide](Professional Readme Guide).
+[Camelia Benavides](https://github.com/cameliabenavides10)
+
+[Karen Peazzoni](https://github.com/kpeazzoni)
+
+[Michael Smith](https://github.com/AustinBQ02)
+
+[Reuben Schmolke](https://github.com/RoobyDoobster)
 
 ## License
 
