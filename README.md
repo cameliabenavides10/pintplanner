@@ -5,7 +5,7 @@
 Trying to plan a day out? Which brewery? Which restaurants? This project helps by giving you some options for breweries in Austin, and then providing some restaurant choices based on which brewery you select. 
 
 
-## Table of Contents (Optional)
+## Table of Contents
 
 - [Deployment](#deployment)
 - [Features](#features)
@@ -18,7 +18,7 @@ Trying to plan a day out? Which brewery? Which restaurants? This project helps b
 
 ## Deployment
 
-GitHub Pages!
+Deployed to GitHub Pages - [Pint Planner](https://cameliabenavides10.github.io/pintplanner/)
 
 ## Features
 
@@ -58,6 +58,10 @@ style="display: inline-block; margin: 0 auto; max-width: 300px">
 Open Brewery Database API [Github](https://github.com/openbrewerydb/openbrewerydb#readme)
 
 Restaurants Near Me USA API [Rapid API](https://rapidapi.com/makingdatameaningful/api/restaurants-near-me-usa/)
+
+Full Stack Blog - [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+
+Coding Boot Camp at UT - [public profile](https://github.com/the-Coding-Boot-Camp-at-UT) - _code from private repo inspired the design of populating results_
 
 ## Authors
 
