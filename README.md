@@ -37,6 +37,12 @@ Simply open the browser to get started and follow these instructions.
 
 ## Development
 
+### Planning
+
+[User Stories & Acceptance Criteria](https://github.com/cameliabenavides10/pintplanner/issues/38)
+
+[Historical Product Roadmap / Status Updates](https://github.com/cameliabenavides10/pintplanner/issues/39)
+
 We started with our wireframe below.
 
 <img
@@ -52,6 +58,12 @@ We used the following color palette.
 src="./assets/images/color-palette.png"
 alt="Color Palette"
 style="display: inline-block; margin: 0 auto; max-width: 300px">
+
+
+
+### Future Development
+
+Any additional development plans, feature requests, and bug reports are tracked here: [Future Development Goals](https://github.com/cameliabenavides10/pintplanner/issues/41)
 
 ## Credits
 
